@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8D9C8A9D-5DED-4B64-BF65-B598BA549D93}") = "TellemCSharp", "TellemCSharp\TellemCSharp.lsxproj", "{2A41F07D-DD9D-4F74-B017-E777EDFB402F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TellemCSharp.Server", "TellemCSharp\TellemCSharp.Server\TellemCSharp.Server.csproj", "{1AA06EB3-4D3C-46B8-B244-D67393C61F81}"
+EndProject
+Project("{262852C6-CD72-467D-83FE-5EEB1973A190}") = "TellemCSharp.HTMLClient", "TellemCSharp\TellemCSharp.HTMLClient\TellemCSharp.HTMLClient.jsproj", "{5F2B197E-940D-4AAC-A9FD-FC6AB2216EB9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TellemCSharp.DesktopClient", "TellemCSharp\TellemCSharp.DesktopClient\TellemCSharp.DesktopClient.csproj", "{EC66B38F-1739-4712-ACD7-8BDCCDE67036}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2A41F07D-DD9D-4F74-B017-E777EDFB402F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A41F07D-DD9D-4F74-B017-E777EDFB402F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A41F07D-DD9D-4F74-B017-E777EDFB402F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A41F07D-DD9D-4F74-B017-E777EDFB402F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1AA06EB3-4D3C-46B8-B244-D67393C61F81}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1AA06EB3-4D3C-46B8-B244-D67393C61F81}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1AA06EB3-4D3C-46B8-B244-D67393C61F81}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1AA06EB3-4D3C-46B8-B244-D67393C61F81}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F2B197E-940D-4AAC-A9FD-FC6AB2216EB9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F2B197E-940D-4AAC-A9FD-FC6AB2216EB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F2B197E-940D-4AAC-A9FD-FC6AB2216EB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F2B197E-940D-4AAC-A9FD-FC6AB2216EB9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC66B38F-1739-4712-ACD7-8BDCCDE67036}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC66B38F-1739-4712-ACD7-8BDCCDE67036}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC66B38F-1739-4712-ACD7-8BDCCDE67036}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC66B38F-1739-4712-ACD7-8BDCCDE67036}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

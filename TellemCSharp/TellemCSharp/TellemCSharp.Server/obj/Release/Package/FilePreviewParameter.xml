@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="uat.justellem.com/Tellem" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\Users\\Alec\\documents\\visual\ studio\ 2013\\Projects\\TellemCSharp\\TellemCSharp\\TellemCSharp\.Server\\obj\\Release\\Package\\PackageTmp$" />
+    <parameterEntry kind="ProviderPath" scope="setAcl" match="^C:\\Users\\Alec\\documents\\visual\ studio\ 2013\\Projects\\TellemCSharp\\TellemCSharp\\TellemCSharp\.Server\\obj\\Release\\Package\\PackageTmp$" />
+  </parameter>
+  <parameter name="0fc544d4-77dc-4b6f-bb59-36dd05cffd97-Web.config Connection String" description="" value="Data Source=uat.justellem.com\SQLEXPRESS;Initial Catalog=Tellem;User ID=sa;Password=NeSoTe01" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Alec\\documents\\visual\ studio\ 2013\\Projects\\TellemCSharp\\TellemCSharp\\TellemCSharp\.Server\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='0fc544d4-77dc-4b6f-bb59-36dd05cffd97']/@connectionString" />
+  </parameter>
+  <parameter name="_IntrinsicData-Web.config Connection String" description="_IntrinsicData Connection String used in web.config by the application to access the database." value="Data Source=|SqlExpressInstanceName|;AttachDbFilename=|ApplicationDatabasePath|;Integrated Security=True;Connect Timeout=30;MultipleActiveResultSets=True" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Alec\\documents\\visual\ studio\ 2013\\Projects\\TellemCSharp\\TellemCSharp\\TellemCSharp\.Server\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='_IntrinsicData']/@connectionString" />
+  </parameter>
+</parameters>

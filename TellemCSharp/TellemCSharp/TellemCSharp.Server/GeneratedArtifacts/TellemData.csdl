@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" Namespace="LightSwitchApplication" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityType Name="Company">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Edm.Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Company_Name" Type="Edm.String" MaxLength="100" ConcurrencyMode="Fixed" />
+    <Property Name="Longitude" Type="Edm.Double" />
+    <Property Name="Latitude" Type="Edm.Double" />
+    <Property Name="Active" Type="Edm.Boolean" ConcurrencyMode="Fixed" />
+  </EntityType>
+  <EntityType Name="Feedback">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Edm.Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Company" Type="Edm.String" MaxLength="100" ConcurrencyMode="Fixed" />
+    <Property Name="Location" Type="Edm.String" MaxLength="100" ConcurrencyMode="Fixed" />
+    <Property Name="Employee" Type="Edm.String" MaxLength="100" ConcurrencyMode="Fixed" />
+    <Property Name="Comment" Type="Edm.String" MaxLength="Max" Unicode="false" />
+    <Property Name="UserID" Type="Edm.String" MaxLength="50" ConcurrencyMode="Fixed" />
+    <Property Name="DateCreated" Type="Edm.DateTime" Precision="3" ConcurrencyMode="Fixed" />
+    <Property Name="Mood" Type="Edm.Int32" ConcurrencyMode="Fixed" />
+    <Property Name="Product" Type="Edm.String" MaxLength="Max" ConcurrencyMode="Fixed" />
+    <NavigationProperty Name="Mood1" Relationship="LightSwitchApplication.FK_Feedback_Mood" ToRole="Mood" FromRole="Feedback" />
+  </EntityType>
+  <EntityType Name="Message">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Edm.Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MessageName" Type="Edm.String" MaxLength="Max" ConcurrencyMode="Fixed" />
+    <Property Name="Message1" Type="Edm.String" MaxLength="Max" ConcurrencyMode="Fixed" />
+  </EntityType>
+  <EntityType Name="Mood">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Edm.Int32" Nullable="false" />
+    <Property Name="Description" Type="Edm.String" MaxLength="100" ConcurrencyMode="Fixed" />
+    <Property Name="Emoticon" Type="Edm.Binary" MaxLength="Max" />
+    <NavigationProperty Name="Feedbacks" Relationship="LightSwitchApplication.FK_Feedback_Mood" ToRole="Feedback" FromRole="Mood" />
+  </EntityType>
+  <Association Name="FK_Feedback_Mood">
+    <End Role="Mood" Type="LightSwitchApplication.Mood" Multiplicity="0..1" />
+    <End Role="Feedback" Type="LightSwitchApplication.Feedback" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Mood">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Feedback">
+        <PropertyRef Name="Mood" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="TellemData" m:IsDefaultEntityContainer="true">
+    <EntitySet Name="Companys" EntityType="LightSwitchApplication.Company" />
+    <EntitySet Name="Feedbacks" EntityType="LightSwitchApplication.Feedback" />
+    <EntitySet Name="Messages" EntityType="LightSwitchApplication.Message" />
+    <EntitySet Name="Moods" EntityType="LightSwitchApplication.Mood" />
+    <AssociationSet Name="FK_Feedback_Mood" Association="LightSwitchApplication.FK_Feedback_Mood">
+      <End Role="Mood" EntitySet="Moods" />
+      <End Role="Feedback" EntitySet="Feedbacks" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

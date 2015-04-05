@@ -1,0 +1,7 @@
+TellemCSharp.Server.Properties.Service.lsml
+TellemCSharp.Server.DataSources.TellemData.Companys.lsml
+TellemCSharp.Server.DataSources.TellemData.Feedbacks.lsml
+TellemCSharp.Server.DataSources.TellemData.Moods.lsml
+TellemCSharp.Server.Properties.DataSources.TellemData.lsml
+TellemCSharp.Server.DataSources.TellemData.qryMyFeedback.lsml
+TellemCSharp.Server.DataSources.TellemData.Messages.lsml

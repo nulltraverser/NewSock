@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="TellemDataStore" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="TellemDataStore">
+    <EntitySet Name="Companys" EntityType="TellemDataStore.Company" store:Type="Tables" Schema="dbo" Table="Companys" />
+    <EntitySet Name="Feedbacks" EntityType="TellemDataStore.Feedback" store:Type="Tables" Schema="dbo" Table="Feedback" />
+    <EntitySet Name="Messages" EntityType="TellemDataStore.Message" store:Type="Tables" Schema="dbo" Table="Messages" />
+    <EntitySet Name="Moods" EntityType="TellemDataStore.Mood" store:Type="Tables" Schema="dbo" Table="Mood" />
+    <AssociationSet Name="FK_Feedback_Mood" Association="TellemDataStore.FK_Feedback_Mood">
+      <End Role="Mood" EntitySet="Moods" />
+      <End Role="Feedback" EntitySet="Feedbacks" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Company">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Company Name" Type="nvarchar" MaxLength="100" />
+    <Property Name="Longitude" Type="float" />
+    <Property Name="Latitude" Type="float" />
+    <Property Name="Active" Type="bit" />
+  </EntityType>
+  <EntityType Name="Feedback">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Company" Type="nvarchar" MaxLength="100" />
+    <Property Name="Location" Type="nvarchar" MaxLength="100" />
+    <Property Name="Employee" Type="nvarchar" MaxLength="100" />
+    <Property Name="Comment" Type="text" />
+    <Property Name="UserID" Type="nvarchar" MaxLength="50" />
+    <Property Name="DateCreated" Type="datetime" />
+    <Property Name="Product" Type="nvarchar(max)" />
+    <Property Name="Mood" Type="int" />
+  </EntityType>
+  <EntityType Name="Message">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="MessageName" Type="nvarchar(max)" />
+    <Property Name="Message" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="Mood">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="100" />
+    <Property Name="Emoticon" Type="image" />
+  </EntityType>
+  <Association Name="FK_Feedback_Mood">
+    <End Role="Mood" Type="TellemDataStore.Mood" Multiplicity="0..1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="Feedback" Type="TellemDataStore.Feedback" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Mood">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Feedback">
+        <PropertyRef Name="Mood" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

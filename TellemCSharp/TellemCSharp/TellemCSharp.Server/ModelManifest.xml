@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<ModelDocumentManifest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Documents>
+    <Document FullPath="C:\Users\Alec\documents\visual studio 2013\Projects\TellemCSharp\TellemCSharp\TellemCSharp.Server\DataSources\TellemData\Companys.lsml" Checksum="7EB124C88936A993EAFCEBC8EAECE6AFC3DF6F4EDF503B42F2E45FEA930C065F" />
+    <Document FullPath="C:\Users\Alec\documents\visual studio 2013\Projects\TellemCSharp\TellemCSharp\TellemCSharp.Server\DataSources\TellemData\Feedbacks.lsml" Checksum="6C4DF6405C46A1541F4A3EA853F3F670334F520F52BFBC9C5E75276CC38D9BFF" />
+    <Document FullPath="C:\Users\Alec\documents\visual studio 2013\Projects\TellemCSharp\TellemCSharp\TellemCSharp.Server\DataSources\TellemData\qryMyFeedback.lsml" Checksum="A593B1D8D473E26E8C0AAB4DE3BA25FC84E00C28E68E291A178152AF9EC15D98" />
+    <Document FullPath="C:\Users\Alec\documents\visual studio 2013\Projects\TellemCSharp\TellemCSharp\TellemCSharp.Server\DataSources\TellemData\Messages.lsml" Checksum="F11BD91D9F1B8E73E6238F99CB93060A9D9EEA3DF3442DFAB601C3974040DC08" />
+    <Document FullPath="C:\Users\Alec\documents\visual studio 2013\Projects\TellemCSharp\TellemCSharp\TellemCSharp.Server\DataSources\TellemData\Moods.lsml" Checksum="F446D3C70E0A174FAAF5964CAB380E66FBF7A4DEC664DD52321613A7CBF0A72B" />
+    <Document FullPath="C:\Users\Alec\documents\visual studio 2013\Projects\TellemCSharp\TellemCSharp\TellemCSharp.Server\Properties\DataSources\TellemData.lsml" Checksum="B1AD6BDF75D87FB766B1FE04AD3C670FCC7488D9AC826CF17F8C00E14FEBC776" />
+    <Document FullPath="C:\Users\Alec\documents\visual studio 2013\Projects\TellemCSharp\TellemCSharp\TellemCSharp.Server\Properties\Service.lsml" Checksum="0039BC8431FF5717802BED5489907667354C38A781F90A0B39D4F62761407D7C" />
+  </Documents>
+</ModelDocumentManifest>

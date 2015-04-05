@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <EnableENC>False</EnableENC>
+    <ProjectView>ProjectFiles</ProjectView>
+    <StartUpClientProject>TellemCSharp.HTMLClient</StartUpClientProject>
+    <EncryptedPublishConnectionString>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAYPztjsXrrEeQrjMfpzpvtgAAAAACAAAAAAAQZgAAAAEAACAAAAAx56nIiufMT83Z0j7j9EfE0QHwjQQayxNkoYjoQyRirAAAAAAOgAAAAAIAACAAAACWdjKatNLmpXDAgJx090gmxdkVLc0WkQeaGT6GcRBK97AAAADlN+AuwO39Lwjd6Lw6ZdfU/zn5uF1Yz4L2xHJFm/VXtf4Eg7It9nbkMGPzysFMHRMjRBeU32b2sNMpKqwg9LfyWtM4PYr5yKSpeNqdfVhoSfJknQ4TfdnP83Vz4R7IyyNOouOManwAQ9ImGEd1HSlunVkMiW/8wVe7PgZsbXcQiyupHTglUgIM6TreABhC8/79Ibrp2dOihn7cy43qdR9KnX6EnqzueKCLgWnFgUfqwEAAAAChmU6ECFcSY1ncSRkwOQAUBJriNrVdEzR4Fhv4i+9v7ZOYP2vq6uA+BSVq+FLPU+K+aaot64asF4An52HOhpsZ</EncryptedPublishConnectionString>
+    <EncryptedPublishSchemaConnectionString />
+    <EncryptedClientConnectionString>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAYPztjsXrrEeQrjMfpzpvtgAAAAACAAAAAAAQZgAAAAEAACAAAAB+vXJnLxtKd6hzuOAwjJGon53O/9UEAbxbomXcDgsr7wAAAAAOgAAAAAIAACAAAAD9bR+S1LVK+/CrIZCXABhktFPtPjzvD3uT8ttUoYWMoLAAAABVT4G5yQr2yuxt4BBCGaK+mLcDGobA/GifxDtzJB07yMtiM+xwFpJxU47td8BAt34y0HtTuLVp0eJ0J0V7j9xikRlX09V22+1xJzRXTvvOj+CJIhYBzo7/Q5HpGSS+olqqtGmAMMZJQWrcbdiCUJebmYE3lLtwkDqAoxGXvm0xUCuuGpxmXyazgKFBzW1iZ1ipMe+mSVrDWSeBll0i2EKXOaXNzIMVJqZcr0cCr3/RKkAAAACS8GiRs/1Gp5D+JYbZMckfMeydz7Pwe4qP+BDw7HD6vSDV1af/cYwlTcaeMDe5FYxSzlCC+o9ZRKzSuKngtwzF</EncryptedClientConnectionString>
+    <EncryptedAdministratorPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAYPztjsXrrEeQrjMfpzpvtgAAAAACAAAAAAAQZgAAAAEAACAAAADCOftJd+GYKA21yoXwx1oj+d5ZReg3he51ftmRmXofMwAAAAAOgAAAAAIAACAAAABTbaxZXNl0aR0wCOLVfeJpdf0OD17UpP5MXZMq2XHDqyAAAAAwvqigvUaQMxx1Xw9KkQq0jt2p/LERvOKKlQ/X49AdCkAAAAAwcHqfeUEbRZG6AtcoLVPNAqt3aILQO9XrxEXzBf7CpCh/4RXRei959x6JaXK4WHhHxP82e3vVePn4304uC0Ri</EncryptedAdministratorPassword>
+    <PublishUserName>
+    </PublishUserName>
+    <EncryptedPublishUserPassword>
+    </EncryptedPublishUserPassword>
+    <AzureSubscriptionId>00000000-0000-0000-0000-000000000000</AzureSubscriptionId>
+    <AzureManagementThumbprint />
+    <SharePointServerToServerCertificatePassword />
+    <GrantedPermissions>LightSwitchApplication:Tellem</GrantedPermissions>
+    <SchemaManagementDatabaseIncludesSecurityObjects>True</SchemaManagementDatabaseIncludesSecurityObjects>
+    <SchemaManagementSchemaBuildState>1</SchemaManagementSchemaBuildState>
+  </PropertyGroup>
+</Project>

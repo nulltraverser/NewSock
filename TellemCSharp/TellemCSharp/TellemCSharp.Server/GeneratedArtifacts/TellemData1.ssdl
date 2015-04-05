@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="TellemData1Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="TellemData1Store">
+    <EntitySet Name="Companys" EntityType="TellemData1Store.Company1" store:Type="Tables" Schema="dbo" Table="Companys" />
+    <EntitySet Name="Feedbacks" EntityType="TellemData1Store.Feedback1" store:Type="Tables" Schema="dbo" Table="Feedback" />
+    <EntitySet Name="Moods" EntityType="TellemData1Store.Mood1" store:Type="Tables" Schema="dbo" Table="Mood" />
+    <AssociationSet Name="FK_Feedback_Mood1" Association="TellemData1Store.FK_Feedback_Mood1">
+      <End Role="Mood" EntitySet="Moods" />
+      <End Role="Feedback" EntitySet="Feedbacks" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Company1">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Company Name" Type="nvarchar" MaxLength="100" />
+    <Property Name="Longitude" Type="float" />
+    <Property Name="Latitude" Type="float" />
+    <Property Name="Active" Type="bit" />
+  </EntityType>
+  <EntityType Name="Feedback1">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Company" Type="nvarchar" MaxLength="100" />
+    <Property Name="Location" Type="nvarchar" MaxLength="100" />
+    <Property Name="Employee" Type="nvarchar" MaxLength="100" />
+    <Property Name="Comment" Type="text" />
+    <Property Name="UserID" Type="nvarchar" MaxLength="50" />
+    <Property Name="DateCreated" Type="datetime" />
+    <Property Name="Mood" Type="int" />
+  </EntityType>
+  <EntityType Name="Mood1">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="100" />
+    <Property Name="Emoticon" Type="image" />
+  </EntityType>
+  <Association Name="FK_Feedback_Mood1">
+    <End Role="Mood" Type="TellemData1Store.Mood1" Multiplicity="0..1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="Feedback" Type="TellemData1Store.Feedback1" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Mood">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Feedback">
+        <PropertyRef Name="Mood" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

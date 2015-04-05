@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<ModelDocumentManifest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Documents>
+    <Document FullPath="C:\Users\Alec\documents\visual studio 2013\Projects\TellemCSharp\TellemCSharp\TellemCSharp.HTMLClient\Properties\TellemData\Feedbacks.lsml" Checksum="C836F78B0251B525A89C75CAD4D7A894D8537B0228B54D64A1AD4A577A60996F" />
+    <Document FullPath="C:\Users\Alec\documents\visual studio 2013\Projects\TellemCSharp\TellemCSharp\TellemCSharp.HTMLClient\Properties\Client.lsml" Checksum="87CBF5CCB7E8F81FC6E84C9E2C29F928E15F41B68F323288D9090F3906D11F35" />
+    <Document FullPath="C:\Users\Alec\documents\visual studio 2013\Projects\TellemCSharp\TellemCSharp\TellemCSharp.HTMLClient\Properties\Proxies.lsml" Checksum="E89B015B6D206B5C7AD77A6218AE681D32FAB1A86C5D3A263476D4E42559C019" />
+    <Document FullPath="C:\Users\Alec\documents\visual studio 2013\Projects\TellemCSharp\TellemCSharp\TellemCSharp.HTMLClient\Screens\About.lsml" Checksum="A4DCF6AA6B04F0D7B186456BEB6E0B14E3ABA8C445481515B1E4259AB59D4371" />
+    <Document FullPath="C:\Users\Alec\documents\visual studio 2013\Projects\TellemCSharp\TellemCSharp\TellemCSharp.HTMLClient\Screens\AddEditFeedback.lsml" Checksum="430F6E637E189258B52E76E9653E009B4A9D9F3CA303265DF082D3861F91449A" />
+    <Document FullPath="C:\Users\Alec\documents\visual studio 2013\Projects\TellemCSharp\TellemCSharp\TellemCSharp.HTMLClient\Screens\BrowseFeedbacks.lsml" Checksum="8A1715926D93A60419A3767BCB543916521E63ABDC9A5F591CC698F09FD9B615" />
+    <Document FullPath="C:\Users\Alec\documents\visual studio 2013\Projects\TellemCSharp\TellemCSharp\TellemCSharp.HTMLClient\Screens\Main.lsml" Checksum="F783F1A3C73EF9BA23F28CDA47AD013814F187205F1932852F39CF44764F3768" />
+    <Document FullPath="C:\Users\Alec\documents\visual studio 2013\Projects\TellemCSharp\TellemCSharp\TellemCSharp.HTMLClient\Screens\MyFeedback.lsml" Checksum="EF045EAE7AB2AD70FEE96338025DF1ACC70341AC0E976CA6B4C61C2BA3C76E12" />
+    <Document FullPath="C:\Users\Alec\documents\visual studio 2013\Projects\TellemCSharp\TellemCSharp\TellemCSharp.HTMLClient\Screens\ViewFeedback.lsml" Checksum="D4E4867B8DD15C50D3DB52FC0F9A9CE332AF28838F590C762FBDE98B425C4AC4" />
+  </Documents>
+</ModelDocumentManifest>

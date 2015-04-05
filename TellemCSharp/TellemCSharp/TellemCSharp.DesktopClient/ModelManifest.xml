@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<ModelDocumentManifest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Documents>
+    <Document FullPath="C:\Users\Alec\documents\visual studio 2013\Projects\TellemCSharp\TellemCSharp\TellemCSharp.DesktopClient\Properties\Client.lsml" Checksum="30DD78008EBACDD551DDF05CEC00C88C432579BC96015EF8B8B3CD29CF71685D" />
+    <Document FullPath="C:\Users\Alec\documents\visual studio 2013\Projects\TellemCSharp\TellemCSharp\TellemCSharp.DesktopClient\Properties\Proxies.lsml" Checksum="D43F74BD272BEDBE4E512A906FED0AC76CD6EB9EC29DA4B770639E5051C8E3D5" />
+    <Document FullPath="C:\Users\Alec\documents\visual studio 2013\Projects\TellemCSharp\TellemCSharp\TellemCSharp.DesktopClient\Screens\MoodsListDetail.lsml" Checksum="35A6E364E5839783A8284581B5D0770B04AC9954FC3D152DE3C357168F40A046" />
+  </Documents>
+</ModelDocumentManifest>

@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|AnyCPU">
+      <Configuration>Debug</Configuration>
+      <Platform>AnyCPU</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|AnyCPU">
+      <Configuration>Release</Configuration>
+      <Platform>AnyCPU</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Condition=" '$(Configuration)' != 'Release' ">
+    <UseDesignTimeFeatures>true</UseDesignTimeFeatures>
+  </PropertyGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{5f2b197e-940d-4aac-a9fd-fc6ab2216eb9}</ProjectGuid>
+    <LightSwitchVersion>v4.0</LightSwitchVersion>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\LightSwitch\v4.0\MobileClient\Microsoft.LightSwitch.MobileClient.Default.props" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\LightSwitch\v4.0\MobileClient\Microsoft.LightSwitch.MobileClient.props" />
+  <PropertyGroup>
+    <!--TargetPlatformIdentifier>Windows</TargetPlatformIdentifier>
+    <TargetPlatformVersion>8.0</TargetPlatformVersion-->
+    <LightSwitchProjectTypeV3>Client</LightSwitchProjectTypeV3>
+    <LightSwitchProjectSubType>JScript</LightSwitchProjectSubType>
+    <ProjectTypeGuids>{DA98106F-DEFA-4A62-8804-0BD2F166A45D};{262852c6-cd72-467d-83fe-5eeb1973a190}</ProjectTypeGuids>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <SupportedCultures>en-US</SupportedCultures>
+    <DefaultPlatform>AnyCPU</DefaultPlatform>
+    <ClientProjectName>HTMLClient</ClientProjectName>
+    <ServerProjectReference>..\TellemCSharp.Server\TellemCSharp.Server.csproj</ServerProjectReference>
+    <LightSwitchDisplayName>HTMLClient</LightSwitchDisplayName>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="Content\dark-theme-2.0.0.css" />
+    <Content Include="Content\Images\ajax-loader.gif" />
+    <Content Include="Content\Images\icons-18-black.png" />
+    <Content Include="Content\Images\icons-18-white.png" />
+    <Content Include="Content\Images\icons-36-black.png" />
+    <Content Include="Content\Images\icons-36-white.png" />
+    <Content Include="Content\Images\Icons\Android\ic_launcher_drawable_hdpi.png" />
+    <Content Include="Content\Images\Icons\Android\ic_launcher_drawable_ldpi.png" />
+    <Content Include="Content\Images\Icons\Android\ic_launcher_drawable_mdpi.png" />
+    <Content Include="Content\Images\Icons\Android\ic_launcher_drawable_xhdpi.png" />
+    <Content Include="Content\Images\Icons\Android\ic_launcher_drawable_xxhdpi.png" />
+    <Content Include="Content\Images\Icons\iOS\Icon-120.png" />
+    <Content Include="Content\Images\Icons\iOS\Icon-152.png" />
+    <Content Include="Content\Images\Icons\iOS\Icon-60.png" />
+    <Content Include="Content\Images\Icons\iOS\Icon-76.png" />
+    <Content Include="Content\Images\Icons\nice-highres.png" />
+    <Content Include="Content\Images\Icons\Tellem Square Logo v3.png" />
+    <Content Include="Content\Images\msls-black-icons-18.png" />
+    <Content Include="Content\Images\msls-black-icons-36.png" />
+    <Content Include="Content\Images\msls-loader-dark.gif" />
+    <Content Include="Content\Images\msls-loader-light.gif" />
+    <Content Include="Content\Images\msls-white-icons-18.png" />
+    <Content Include="Content\Images\msls-white-icons-36.png" />
+    <Content Include="Content\Images\msls-blue-icons-36.png" />
+    <Content Include="Content\Images\_user-logo.png" />
+    <Content Include="Content\Images\_user-splash-screen.png" />
+    <Content Include="Content\jquery.mobile-1.3.0.css" />
+    <Content Include="Content\jquery.mobile-1.3.0.min.css" />
+    <Content Include="Content\jquery.mobile.structure-1.3.0.css" />
+    <Content Include="Content\jquery.mobile.structure-1.3.0.min.css" />
+    <Content Include="Content\jquery.mobile.theme-1.3.0.css" />
+    <Content Include="Content\jquery.mobile.theme-1.3.0.min.css" />
+    <Content Include="Content\light-theme-2.0.0.css" />
+    <Content Include="Content\msls-2.0.0.css" />
+    <Content Include="Content\msls-2.0.0.min.css" />
+    <Content Include="Content\msls-dark-2.0.0.css" />
+    <Content Include="Content\msls-light-2.0.0.css" />
+    <Content Include="Content\CustomMods.css" />
+    <Content Include="Content\Tellem.css" />
+    <Content Include="Content\Tellem.min.css" />
+    <Content Include="default.htm" />
+    <Content Include="Content\user-customization.css" />
+    <Content Include="Content\Images\user-logo.png" />
+    <Content Include="Content\Images\user-splash-screen.png" />
+    <Content Include="Content\Web.config" />
+    <Content Include="NDA.html" />
+    <Content Include="packages.config" />
+    <Content Include="Screens\AddEditFeedback.lsml.js">
+      <DependentUpon>AddEditFeedback.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\BrowseFeedbacks.lsml.js">
+      <DependentUpon>BrowseFeedbacks.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\Main.lsml.js">
+      <DependentUpon>Main.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\MyFeedback.lsml.js">
+      <DependentUpon>MyFeedback.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\ViewFeedback.lsml.js">
+      <DependentUpon>ViewFeedback.lsml</DependentUpon>
+    </Content>
+    <Content Include="Scripts\datajs-1.1.1.js" />
+    <Content Include="Scripts\datajs-1.1.1.min.js" />
+    <Content Include="Scripts\jquery-1.9.1.intellisense.js" />
+    <Content Include="Scripts\jquery-1.9.1.js" />
+    <Content Include="Scripts\jquery-1.9.1.min.js" />
+    <Content Include="Scripts\jquery.mobile-1.3.0-vsdoc.js" />
+    <Content Include="Scripts\jquery.mobile-1.3.0.js" />
+    <Content Include="Scripts\jquery.mobile-1.3.0.min.js" />
+    <Content Include="Scripts\moment-with-langs.js" />
+    <Content Include="Scripts\moment-with-langs.min.js" />
+    <Content Include="Scripts\moment.js" />
+    <Content Include="Scripts\moment.min.js" />
+    <Content Include="Scripts\msls.js" />
+    <Content Include="Scripts\msls-2.0.0-vsdoc.js" />
+    <Content Include="Scripts\msls-2.0.0.js" />
+    <Content Include="Scripts\msls-2.0.0.min.js" />
+    <Content Include="Scripts\winjs-1.0.js" />
+    <Content Include="Scripts\winjs-1.0.min.js" />
+    <Content Include="UserCode\Feedback.lsml.js">
+      <DependentUpon>
+      </DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ServiceMetadataReference Include="..\TellemCSharp.Server\TellemCSharp.Server.csproj">
+      <Visible>false</Visible>
+    </ServiceMetadataReference>
+  </ItemGroup>
+  <ItemGroup>
+    <LightSwitchModel Include="Properties\Client.lsml">
+      <ProjectCritical>true</ProjectCritical>
+    </LightSwitchModel>
+    <LightSwitchModel Include="Properties\Proxies.lsml" />
+    <LightSwitchModel Include="Properties\TellemData\Feedbacks.lsml" />
+    <LightSwitchModel Include="Screens\About.lsml" />
+    <LightSwitchModel Include="Screens\AddEditFeedback.lsml" />
+    <LightSwitchModel Include="Screens\BrowseFeedbacks.lsml" />
+    <LightSwitchModel Include="Screens\Main.lsml" />
+    <LightSwitchModel Include="Screens\MyFeedback.lsml" />
+    <LightSwitchModel Include="Screens\ViewFeedback.lsml" />
+  </ItemGroup>
+  <ItemGroup>
+    <_ClientBuildFile Include="GeneratedArtifacts\model.json">
+      <SubFolder>Content\Resources\Generated</SubFolder>
+    </_ClientBuildFile>
+    <_ClientBuildFile Include="GeneratedArtifacts\data.js">
+      <SubFolder>Scripts\Generated</SubFolder>
+    </_ClientBuildFile>
+    <_ClientBuildFile Include="GeneratedArtifacts\viewModel.js">
+      <SubFolder>Scripts\Generated</SubFolder>
+    </_ClientBuildFile>
+    <_ClientBuildFile Include="GeneratedArtifacts\usercode.js">
+      <SubFolder>Scripts\Generated</SubFolder>
+    </_ClientBuildFile>
+    <_ClientBuildFile Include="GeneratedArtifacts\resources.js">
+      <SubFolder>Scripts\Generated</SubFolder>
+    </_ClientBuildFile>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\LightSwitch\v4.0\MobileClient\Microsoft.LightSwitch.MobileClient.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\LightSwitch\v4.0\Microsoft.LightSwitch.Build.Tasks.targets" />
+  <!-- Redefine the targets to be empty -->
+  <Target Name="GetXapOutputFile" />
+  <PropertyGroup>
+    <AppxPackage>false</AppxPackage>
+    <AppxGeneratePriEnabled>false</AppxGeneratePriEnabled>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

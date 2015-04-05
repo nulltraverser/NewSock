@@ -1,0 +1,4442 @@
+﻿
+{
+  "modules":
+  [
+    {
+      "id": ":!module",
+      "name": "Microsoft.LightSwitch.MobileWeb",
+      "targetPlatform": "MobileWeb",
+      "globalItems":
+      [
+        {
+          "id": ":RootControl",
+          "name": "RootControl",
+          "attachedLabelSupport": "DisplayedByContainer",
+          "supportedContentItemKind": "Unset",
+          "properties":
+          [
+            {
+              "id": ":RootControl/Properties[BrowseOnly]",
+              "name": "BrowseOnly",
+              "attachedPropertyAvailability": "Default",
+              "isAttachable": true,
+              "isInheritable": true,
+              "propertyType": { "__id": ":Boolean" },
+              "defaultValueSource":
+              {
+                "value": false
+              }
+            },
+            {
+              "id": ":RootControl/Properties[AttachedLabelPosition]",
+              "name": "AttachedLabelPosition",
+              "attachedPropertyAvailability": "Default",
+              "isAttachable": true,
+              "isInheritable": true,
+              "propertyType": { "__id": ":String" },
+              "defaultValueSource":
+              {
+                "value": "Top"
+              }
+            },
+            {
+              "id": ":RootControl/Properties[HorizontalAlignment]",
+              "name": "HorizontalAlignment",
+              "propertyType": { "__id": ":String" },
+              "defaultValueSource":
+              {
+                "value": "Left"
+              }
+            },
+            {
+              "id": ":RootControl/Properties[WidthSizingMode]",
+              "name": "WidthSizingMode",
+              "propertyType": { "__id": ":String" },
+              "defaultValueSource":
+              {
+                "value": "StretchToContainer"
+              }
+            },
+            {
+              "id": ":RootControl/Properties[HeightSizingMode]",
+              "name": "HeightSizingMode",
+              "propertyType": { "__id": ":String" },
+              "defaultValueSource":
+              {
+                "value": "FitToContent"
+              }
+            },
+            {
+              "id": ":RootControl/Properties[Width]",
+              "name": "Width",
+              "propertyType": { "__id": ":Double" },
+              "defaultValueSource":
+              {
+                "value": -1
+              }
+            },
+            {
+              "id": ":RootControl/Properties[Height]",
+              "name": "Height",
+              "propertyType": { "__id": ":Double" },
+              "defaultValueSource":
+              {
+                "value": -1
+              }
+            },
+            {
+              "id": ":RootControl/Properties[MinWidth]",
+              "name": "MinWidth",
+              "propertyType": { "__id": ":Double" },
+              "defaultValueSource":
+              {
+                "value": 0
+              }
+            },
+            {
+              "id": ":RootControl/Properties[MaxWidth]",
+              "name": "MaxWidth",
+              "propertyType": { "__id": ":Double" },
+              "defaultValueSource":
+              {
+                "value": -1
+              }
+            },
+            {
+              "id": ":RootControl/Properties[MinHeight]",
+              "name": "MinHeight",
+              "propertyType": { "__id": ":Double" },
+              "defaultValueSource":
+              {
+                "value": 0
+              }
+            },
+            {
+              "id": ":RootControl/Properties[MaxHeight]",
+              "name": "MaxHeight",
+              "propertyType": { "__id": ":Double" },
+              "defaultValueSource":
+              {
+                "value": -1
+              }
+            },
+            {
+              "id": ":RootControl/Properties[FontStyle]",
+              "name": "FontStyle",
+              "attachedPropertyAvailability": "Default",
+              "isAttachable": true,
+              "isInheritable": true,
+              "isReadOnly": true,
+              "propertyType": { "__id": ":String" },
+              "defaultValueSource":
+              {
+                "value": "Normal"
+              }
+            },
+            {
+              "id": ":RootControl/Properties[TextAlignment]",
+              "name": "TextAlignment",
+              "propertyType": { "__id": ":String" },
+              "defaultValueSource":
+              {
+                "value": "Left"
+              }
+            },
+            {
+              "id": ":RootControl/Properties[Tap]",
+              "name": "Tap",
+              "isAction": true
+            }
+          ]
+        },
+        {
+          "id": ":RootValueControl",
+          "name": "RootValueControl",
+          "attachedLabelSupport": "DisplayedByContainer",
+          "supportedContentItemKind": "Unset",
+          "baseControl": { "__id": ":RootControl" },
+          "properties":
+          [
+            {
+              "id": ":RootValueControl/Properties[PlaceholderText]",
+              "name": "PlaceholderText",
+              "attachedPropertyAvailability": "Default",
+              "isAttachable": true,
+              "isInheritable": true,
+              "propertyType": { "__id": ":String" }
+            }
+          ]
+        },
+        {
+          "id": ":RootReadOnlyValueControl",
+          "name": "RootReadOnlyValueControl",
+          "attachedLabelSupport": "DisplayedByContainer",
+          "supportedContentItemKind": "Unset",
+          "baseControl": { "__id": ":RootControl" },
+          "propertyOverrides":
+          [
+            {
+              "property": { "__id": ":RootControl/Properties[WidthSizingMode]" },
+              "defaultValueSource":
+              {
+                "value": "FitToContent"
+              }
+            },
+            {
+              "property": { "__id": ":RootControl/Properties[MinWidth]" },
+              "defaultValueSource":
+              {
+                "value": 30
+              }
+            }
+          ]
+        },
+        {
+          "id": ":NoControl",
+          "name": "NoControl",
+          "attachedLabelSupport": "DisplayedByContainer",
+          "isViewer": true,
+          "supportedContentItemKind": "Value",
+          "baseControl": { "__id": ":RootValueControl" }
+        },
+        {
+          "id": ":FlipSwitchControl",
+          "name": "FlipSwitchControl",
+          "attachedLabelSupport": "DisplayedByContainer",
+          "supportedContentItemKind": "Value",
+          "baseControl": { "__id": ":RootValueControl" },
+          "properties":
+          [
+            {
+              "id": ":FlipSwitchControl/Properties[Options]",
+              "name": "Options",
+              "propertyType": { "__id": ":String" },
+              "defaultValueSource":
+              {
+                "value": "YesNoOption"
+              }
+            }
+          ]
+        },
+        {
+          "id": ":DateTimePicker",
+          "name": "DateTimePicker",
+          "attachedLabelSupport": "DisplayedByContainer",
+          "supportedContentItemKind": "Value",
+          "baseControl": { "__id": ":RootValueControl" },
+          "properties":
+          [
+            {
+              "id": ":DateTimePicker/Properties[MinimumYear]",
+              "name": "MinimumYear",
+              "propertyType": { "__id": ":Int32" },
+              "defaultValueSource":
+              {
+                "value": 1930
+              }
+            },
+            {
+              "id": ":DateTimePicker/Properties[MaximumYear]",
+              "name": "MaximumYear",
+              "propertyType": { "__id": ":Int32" },
+              "defaultValueSource":
+              {
+                "value": 2030
+              }
+            },
+            {
+              "id": ":DateTimePicker/Properties[Clock]",
+              "name": "Clock",
+              "propertyType": { "__id": ":String" },
+              "defaultValueSource":
+              {
+                "value": "TwelveHour"
+              }
+            },
+            {
+              "id": ":DateTimePicker/Properties[MinuteIncrement]",
+              "name": "MinuteIncrement",
+              "propertyType": { "__id": ":Int32" },
+              "defaultValueSource":
+              {
+                "value": 5
+              }
+            },
+            {
+              "id": ":DateTimePicker/Properties[DatePickerEnabled]",
+              "name": "DatePickerEnabled",
+              "propertyType": { "__id": ":Boolean" },
+              "defaultValueSource":
+              {
+                "value": true
+              }
+            },
+            {
+              "id": ":DateTimePicker/Properties[TimePickerEnabled]",
+              "name": "TimePickerEnabled",
+              "propertyType": { "__id": ":Boolean" },
+              "defaultValueSource":
+              {
+                "value": true
+              }
+            }
+          ]
+        },
+        {
+          "id": ":DatePicker",
+          "name": "DatePicker",
+          "attachedLabelSupport": "DisplayedByContainer",
+          "supportedContentItemKind": "Value",
+          "baseControl": { "__id": ":RootValueControl" },
+          "properties":
+          [
+            {
+              "id": ":DatePicker/Properties[MinimumYear]",
+              "name": "MinimumYear",
+              "propertyType": { "__id": ":Int32" },
+              "defaultValueSource":
+              {
+                "value": 1930
+              }
+            },
+            {
+              "id": ":DatePicker/Properties[MaximumYear]",
+              "name": "MaximumYear",
+              "propertyType": { "__id": ":Int32" },
+              "defaultValueSource":
+              {
+                "value": 2030
+              }
+            }
+          ]
+        },
+        {
+          "id": ":TextBox",
+          "name": "TextBox",
+          "attachedLabelSupport": "DisplayedByContainer",
+          "supportedContentItemKind": "Value",
+          "baseControl": { "__id": ":RootValueControl" }
+        },
+        {
+          "id": ":EmailAddressEditor",
+          "name": "EmailAddressEditor",
+          "attachedLabelSupport": "DisplayedByContainer",
+          "supportedContentItemKind": "Value",
+          "baseControl": { "__id": ":RootValueControl" }
+        },
+        {
+          "id": ":PercentEditor",
+          "name": "PercentEditor",
+          "attachedLabelSupport": "DisplayedByContainer",
+          "supportedContentItemKind": "Value",
+          "baseControl": { "__id": ":RootValueControl" }
+        },
+        {
+          "id": ":MoneyEditor",
+          "name": "MoneyEditor",
+          "attachedLabelSupport": "DisplayedByContainer",
+          "supportedContentItemKind": "Value",
+          "baseControl": { "__id": ":RootValueControl" }
+        },
+        {
+          "id": ":PhoneNumberEditor",
+          "name": "PhoneNumberEditor",
+          "attachedLabelSupport": "DisplayedByContainer",
+          "supportedContentItemKind": "Value",
+          "baseControl": { "__id": ":RootValueControl" }
+        },
+        {
+          "id": ":WebAddressEditor",
+          "name": "WebAddressEditor",
+          "attachedLabelSupport": "DisplayedByContainer",
+          "supportedContentItemKind": "Value",
+          "baseControl": { "__id": ":RootValueControl" }
+        },
+        {
+          "id": ":EmailAddressViewer",
+          "name": "EmailAddressViewer",
+          "attachedLabelSupport": "DisplayedByContainer",
+          "isViewer": true,
+          "supportedContentItemKind": "Value",
+          "baseControl": { "__id": ":RootReadOnlyValueControl" }
+        },
+        {
+          "id": ":PercentViewer",
+          "name": "PercentViewer",
+          "attachedLabelSupport": "DisplayedByContainer",
+          "isViewer": true,
+          "supportedContentItemKind": "Value",
+          "baseControl": { "__id": ":RootReadOnlyValueControl" }
+        },
+        {
+          "id": ":MoneyViewer",
+          "name": "MoneyViewer",
+          "attachedLabelSupport": "DisplayedByContainer",
+          "isViewer": true,
+          "supportedContentItemKind": "Value",
+          "baseControl": { "__id": ":RootReadOnlyValueControl" }
+        },
+        {
+          "id": ":PhoneNumberViewer",
+          "name": "PhoneNumberViewer",
+          "attachedLabelSupport": "DisplayedByContainer",
+          "isViewer": true,
+          "supportedContentItemKind": "Value",
+          "baseControl": { "__id": ":RootReadOnlyValueControl" }
+        },
+        {
+          "id": ":WebAddressViewer",
+          "name": "WebAddressViewer",
+          "attachedLabelSupport": "DisplayedByContainer",
+          "isViewer": true,
+          "supportedContentItemKind": "Value",
+          "baseControl": { "__id": ":RootReadOnlyValueControl" }
+        },
+        {
+          "id": ":Image",
+          "name": "Image",
+          "attachedLabelSupport": "DisplayedByContainer",
+          "isViewer": true,
+          "supportedContentItemKind": "Value",
+          "baseControl": { "__id": ":RootReadOnlyValueControl" },
+          "properties":
+          [
+            {
+              "id": ":Image/Properties[Scale]",
+              "name": "Scale",
+              "propertyType": { "__id": ":String" },
+              "defaultValueSource":
+              {
+                "value": "Fill"
+              }
+            }
+          ],
+          "propertyOverrides":
+          [
+            {
+              "property": { "__id": ":RootControl/Properties[HeightSizingMode]" },
+              "defaultValueSource":
+              {
+                "value": "FixedSize"
+              }
+            },
+            {
+              "property": { "__id": ":RootControl/Properties[WidthSizingMode]" },
+              "defaultValueSource":
+              {
+                "value": "FixedSize"
+              }
+            },
+            {
+              "property": { "__id": ":RootControl/Properties[Width]" },
+              "defaultValueSource":
+              {
+                "value": 60
+              }
+            },
+            {
+              "property": { "__id": ":RootControl/Properties[Height]" },
+              "defaultValueSource":
+              {
+                "value": 60
+              }
+            },
+            {
+              "property": { "__id": ":RootControl/Properties[MinWidth]" },
+              "defaultValueSource":
+              {
+                "value": 12
+              }
+            },
+            {
+              "property": { "__id": ":RootControl/Properties[MinHeight]" },
+              "defaultValueSource":
+              {
+                "value": 12
+              }
+            }
+          ]
+        },
+        {
+          "id": ":TextArea",
+          "name": "TextArea",
+          "attachedLabelSupport": "DisplayedByContainer",
+          "supportedContentItemKind": "Value",
+          "baseControl": { "__id": ":RootValueControl" },
+          "propertyOverrides":
+          [
+            {
+              "property": { "__id": ":RootControl/Properties[HeightSizingMode]" },
+              "defaultValueSource":
+              {
+                "value": "FixedSize"
+              }
+            },
+            {
+              "property": { "__id": ":RootControl/Properties[Height]" },
+              "defaultValueSource":
+              {
+                "value": 100
+              }
+            }
+          ]
+        },
+        {
+          "id": ":Paragraph",
+          "name": "Paragraph",
+          "attachedLabelSupport": "DisplayedByContainer",
+          "isViewer": true,
+          "supportedContentItemKind": "Value",
+          "baseControl": { "__id": ":RootReadOnlyValueControl" }
+        },
+        {
+          "id": ":Text",
+          "name": "Text",
+          "attachedLabelSupport": "DisplayedByContainer",
+          "isViewer": true,
+          "supportedContentItemKind": "Value",
+          "baseControl": { "__id": ":RootReadOnlyValueControl" }
+        },
+        {
+          "id": ":ValueDropdown",
+          "name": "ValueDropdown",
+          "attachedLabelSupport": "DisplayedByContainer",
+          "isPicker": true,
+          "supportedContentItemKind": "Value",
+          "baseControl": { "__id": ":RootValueControl" }
+        },
+        {
+          "id": ":RootDetailsControl",
+          "name": "RootDetailsControl",
+          "attachedLabelSupport": "DisplayedByContainer",
+          "supportedContentItemKind": "Unset",
+          "baseControl": { "__id": ":RootControl" }
+        },
+        {
+          "id": ":Summary",
+          "name": "Summary",
+          "attachedLabelSupport": "DisplayedByContainer",
+          "isViewer": true,
+          "supportedContentItemKind": "Details",
+          "baseControl": { "__id": ":RootDetailsControl" },
+          "propertyOverrides":
+          [
+            {
+              "property": { "__id": ":RootControl/Properties[WidthSizingMode]" },
+              "defaultValueSource":
+              {
+                "value": "FitToContent"
+              }
+            }
+          ]
+        },
+        {
+          "id": ":DetailsModalPicker",
+          "name": "DetailsModalPicker",
+          "attachedLabelSupport": "DisplayedByContainer",
+          "isPicker": true,
+          "supportedContentItemKind": "Details",
+          "baseControl": { "__id": ":RootDetailsControl" },
+          "childItemPropertySources":
+          [
+            {
+              "property": { "__id": ":RootControl/Properties[BrowseOnly]" },
+              "source":
+              {
+                "value": true
+              }
+            },
+            {
+              "property": { "__id": ":RootControl/Properties[AttachedLabelPosition]" },
+              "source":
+              {
+                "value": "None"
+              }
+            },
+            {
+              "property": { "__id": ":RootControl/Properties[MinWidth]" },
+              "source":
+              {
+                "value": 0
+              }
+            },
+            {
+              "property": { "__id": ":RootGroup/Properties[CompactMargins]" },
+              "source":
+              {
+                "value": true
+              }
+            }
+          ]
+        },
+        {
+          "id": ":RootCollectionControl",
+          "name": "RootCollectionControl",
+          "attachedLabelSupport": "DisplayedByContainer",
+          "supportedContentItemKind": "Unset",
+          "baseControl": { "__id": ":RootControl" },
+          "properties":
+          [
+            {
+              "id": ":RootCollectionControl/Properties[ItemTap]",
+              "name": "ItemTap",
+              "isAction": true
+            },
+            {
+              "id": ":RootCollectionControl/Properties[ShowHeader]",
+              "name": "ShowHeader",
+              "propertyType": { "__id": ":Boolean" },
+              "defaultValueSource":
+              {
+                "value": false
+              }
+            }
+          ]
+        },
+        {
+          "id": ":List",
+          "name": "List",
+          "attachedLabelSupport": "DisplayedByControl",
+          "isViewer": true,
+          "supportedContentItemKind": "Collection",
+          "baseControl": { "__id": ":RootCollectionControl" },
+          "childItemPropertySources":
+          [
+            {
+              "property": { "__id": ":RootGroup/Properties[CompactMargins]" },
+              "source":
+              {
+                "value": true
+              }
+            },
+            {
+              "property": { "__id": ":RootControl/Properties[BrowseOnly]" },
+              "source":
+              {
+                "value": true
+              }
+            },
+            {
+              "property": { "__id": ":RootControl/Properties[AttachedLabelPosition]" },
+              "source":
+              {
+                "value": "None"
+              }
+            },
+            {
+              "property": { "__id": ":RootControl/Properties[HeightSizingMode]" },
+              "source":
+              {
+                "value": "FitToContent"
+              }
+            }
+          ],
+          "properties":
+          [
+            {
+              "id": ":List/Properties[ShowArrows]",
+              "name": "ShowArrows",
+              "propertyType": { "__id": ":String" },
+              "defaultValueSource":
+              {
+                "value": "Auto"
+              }
+            }
+          ]
+        },
+        {
+          "id": ":Table",
+          "name": "Table",
+          "attachedLabelSupport": "DisplayedByControl",
+          "supportedContentItemKind": "Collection",
+          "baseControl": { "__id": ":RootCollectionControl" },
+          "childView": { "__id": ":TableRowLayout" },
+          "childItemPropertySources":
+          [
+            {
+              "property": { "__id": ":RootGroup/Properties[CompactMargins]" },
+              "source":
+              {
+                "value": false
+              }
+            },
+            {
+              "property": { "__id": ":RootControl/Properties[BrowseOnly]" },
+              "source":
+              {
+                "value": true
+              }
+            },
+            {
+              "property": { "__id": ":RootControl/Properties[AttachedLabelPosition]" },
+              "source":
+              {
+                "value": "None"
+              }
+            },
+            {
+              "property": { "__id": ":RootControl/Properties[HeightSizingMode]" },
+              "source":
+              {
+                "value": "FitToContent"
+              }
+            }
+          ]
+        },
+        {
+          "id": ":TileList",
+          "name": "TileList",
+          "attachedLabelSupport": "DisplayedByControl",
+          "isViewer": true,
+          "supportedContentItemKind": "Collection",
+          "baseControl": { "__id": ":RootCollectionControl" },
+          "childItemPropertySources":
+          [
+            {
+              "property": { "__id": ":RootControl/Properties[BrowseOnly]" },
+              "source":
+              {
+                "value": true
+              }
+            },
+            {
+              "property": { "__id": ":RootControl/Properties[AttachedLabelPosition]" },
+              "source":
+              {
+                "value": "None"
+              }
+            },
+            {
+              "property": { "__id": ":RootControl/Properties[HeightSizingMode]" },
+              "source":
+              {
+                "value": "FitToContent"
+              }
+            },
+            {
+              "property": { "__id": ":RootControl/Properties[WidthSizingMode]" },
+              "source":
+              {
+                "value": "FixedSize"
+              }
+            },
+            {
+              "property": { "__id": ":RootControl/Properties[Width]" },
+              "source":
+              {
+                "value": 235
+              }
+            },
+            {
+              "property": { "__id": ":RootControl/Properties[Height]" },
+              "source":
+              {
+                "value": 150
+              }
+            },
+            {
+              "property": { "__id": ":RootGroup/Properties[CompactMargins]" },
+              "source":
+              {
+                "value": true
+              }
+            }
+          ],
+          "properties":
+          [
+            {
+              "id": ":TileList/Properties[IsDynamicTile]",
+              "name": "IsDynamicTile",
+              "attachedPropertyAvailability": "ImmediateChildren",
+              "isAttachable": true,
+              "isInheritable": true,
+              "propertyType": { "__id": ":Boolean" },
+              "defaultValueSource":
+              {
+                "value": true
+              }
+            }
+          ]
+        },
+        {
+          "id": ":Screen",
+          "name": "Screen",
+          "attachedLabelSupport": "DisplayedByControl",
+          "supportedContentItemKind": "Screen",
+          "baseControl": { "__id": ":RootControl" },
+          "properties":
+          [
+            {
+              "id": ":Screen/Properties[ShowAsDialog]",
+              "name": "ShowAsDialog",
+              "isReadOnly": true,
+              "propertyType": { "__id": ":Boolean" },
+              "defaultValueSource":
+              {
+                "value": false
+              }
+            },
+            {
+              "id": ":Screen/Properties[HideTabTitles]",
+              "name": "HideTabTitles",
+              "propertyType": { "__id": ":Boolean" },
+              "defaultValueSource":
+              {
+                "value": false
+              }
+            },
+            {
+              "id": ":Screen/Properties[ScreenType]",
+              "name": "ScreenType",
+              "isReadOnly": true,
+              "propertyType": { "__id": ":String" },
+              "defaultValueSource":
+              {
+                "value": "Browse"
+              }
+            },
+            {
+              "id": ":Screen/Properties[ShowSaveButton]",
+              "name": "ShowSaveButton",
+              "propertyType": { "__id": ":String" }
+            }
+          ]
+        },
+        {
+          "id": ":Pages",
+          "name": "Pages",
+          "attachedLabelSupport": "DisplayedByContainer",
+          "supportedContentItemKind": "Group",
+          "baseControl": { "__id": ":RootControl" }
+        },
+        {
+          "id": ":TabPages",
+          "name": "TabPages",
+          "attachedLabelSupport": "DisplayedByContainer",
+          "supportedContentItemKind": "Group",
+          "baseControl": { "__id": ":Pages" }
+        },
+        {
+          "id": ":DialogPages",
+          "name": "DialogPages",
+          "attachedLabelSupport": "DisplayedByContainer",
+          "supportedContentItemKind": "Group",
+          "baseControl": { "__id": ":Pages" },
+          "childItemPropertySources":
+          [
+            {
+              "property": { "__id": ":RootControl/Properties[WidthSizingMode]" },
+              "source":
+              {
+                "value": "FitToContent"
+              }
+            },
+            {
+              "property": { "__id": ":RootControl/Properties[HeightSizingMode]" },
+              "source":
+              {
+                "value": "FitToContent"
+              }
+            },
+            {
+              "property": { "__id": ":RootControl/Properties[MinWidth]" },
+              "source":
+              {
+                "value": 200
+              }
+            },
+            {
+              "property": { "__id": ":RootControl/Properties[MaxWidth]" },
+              "source":
+              {
+                "value": 400
+              }
+            }
+          ],
+          "properties":
+          [
+            {
+              "id": ":DialogPages/Properties[DialogType]",
+              "name": "DialogType",
+              "attachedPropertyAvailability": "ImmediateChildren",
+              "isAttachable": true,
+              "propertyType": { "__id": ":String" }
+            }
+          ]
+        },
+        {
+          "id": ":RootGroup",
+          "name": "RootGroup",
+          "attachedLabelSupport": "DisplayedByContainer",
+          "supportedContentItemKind": "Unset",
+          "baseControl": { "__id": ":RootControl" },
+          "properties":
+          [
+            {
+              "id": ":RootGroup/Properties[CompactMargins]",
+              "name": "CompactMargins",
+              "attachedPropertyAvailability": "Default",
+              "isAttachable": true,
+              "isInheritable": true,
+              "propertyType": { "__id": ":Boolean" },
+              "defaultValueSource":
+              {
+                "value": false
+              }
+            }
+          ]
+        },
+        {
+          "id": ":RowsLayout",
+          "name": "RowsLayout",
+          "attachedLabelSupport": "DisplayedByControl",
+          "supportedContentItemKind": "Group",
+          "baseControl": { "__id": ":RootGroup" },
+          "properties":
+          [
+            {
+              "id": ":RowsLayout/Properties[WeightedRowHeight]",
+              "name": "WeightedRowHeight",
+              "attachedPropertyAvailability": "ImmediateChildren",
+              "isAttachable": true,
+              "propertyType": { "__id": ":Double" },
+              "defaultValueSource":
+              {
+                "value": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": ":ColumnsLayout",
+          "name": "ColumnsLayout",
+          "attachedLabelSupport": "DisplayedByControl",
+          "supportedContentItemKind": "Group",
+          "baseControl": { "__id": ":RootGroup" },
+          "properties":
+          [
+            {
+              "id": ":ColumnsLayout/Properties[WeightedColumnWidth]",
+              "name": "WeightedColumnWidth",
+              "attachedPropertyAvailability": "ImmediateChildren",
+              "isAttachable": true,
+              "propertyType": { "__id": ":Double" },
+              "defaultValueSource":
+              {
+                "value": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": ":TableRowLayout",
+          "name": "TableRowLayout",
+          "attachedLabelSupport": "DisplayedByControl",
+          "supportedContentItemKind": "Group",
+          "baseControl": { "__id": ":ColumnsLayout" },
+          "childItemPropertySources":
+          [
+            {
+              "property": { "__id": ":RootControl/Properties[WidthSizingMode]" },
+              "source":
+              {
+                "value": "StretchToContainer"
+              }
+            }
+          ]
+        },
+        {
+          "id": ":RootCommand",
+          "name": "RootCommand",
+          "attachedLabelSupport": "DisplayedByContainer",
+          "supportedContentItemKind": "Unset",
+          "baseControl": { "__id": ":RootControl" },
+          "properties":
+          [
+            {
+              "id": ":RootCommand/Properties[HiddenIfDisabled]",
+              "name": "HiddenIfDisabled",
+              "propertyType": { "__id": ":Boolean" },
+              "defaultValueSource":
+              {
+                "value": false
+              }
+            },
+            {
+              "id": ":RootCommand/Properties[Icon]",
+              "name": "Icon",
+              "propertyType": { "__id": ":String" },
+              "defaultValueSource":
+              {
+                "value": "msls-star"
+              }
+            }
+          ]
+        },
+        {
+          "id": ":Button",
+          "name": "Button",
+          "attachedLabelSupport": "DisplayedByControl",
+          "supportedContentItemKind": "Command",
+          "baseControl": { "__id": ":RootCommand" },
+          "defaultAction": { "__id": ":RootControl/Properties[Tap]" },
+          "propertyOverrides":
+          [
+            {
+              "isReadOnly": true,
+              "property": { "__id": ":RootControl/Properties[AttachedLabelPosition]" },
+              "defaultValueSource":
+              {
+                "value": "None"
+              }
+            },
+            {
+              "property": { "__id": ":RootControl/Properties[WidthSizingMode]" },
+              "defaultValueSource":
+              {
+                "value": "FitToContent"
+              }
+            },
+            {
+              "property": { "__id": ":RootControl/Properties[MinWidth]" },
+              "defaultValueSource":
+              {
+                "value": 90
+              }
+            }
+          ]
+        },
+        {
+          "id": ":CommandBarButton",
+          "name": "CommandBarButton",
+          "attachedLabelSupport": "DisplayedByControl",
+          "supportedContentItemKind": "Command",
+          "baseControl": { "__id": ":RootCommand" },
+          "defaultAction": { "__id": ":RootControl/Properties[Tap]" },
+          "propertyOverrides":
+          [
+            {
+              "property": { "__id": ":RootCommand/Properties[HiddenIfDisabled]" },
+              "defaultValueSource":
+              {
+                "value": true
+              }
+            },
+            {
+              "isReadOnly": true,
+              "property": { "__id": ":RootControl/Properties[AttachedLabelPosition]" },
+              "defaultValueSource":
+              {
+                "value": "None"
+              }
+            },
+            {
+              "isReadOnly": true,
+              "property": { "__id": ":RootControl/Properties[HeightSizingMode]" },
+              "defaultValueSource":
+              {
+                "value": "FitToContent"
+              }
+            },
+            {
+              "isReadOnly": true,
+              "property": { "__id": ":RootControl/Properties[WidthSizingMode]" },
+              "defaultValueSource":
+              {
+                "value": "FitToContent"
+              }
+            }
+          ]
+        },
+        {
+          "id": ":RootCustomControl",
+          "name": "RootCustomControl",
+          "attachedLabelSupport": "DisplayedByContainer",
+          "supportedContentItemKind": "Unset",
+          "baseControl": { "__id": ":RootControl" },
+          "properties":
+          [
+            {
+              "id": ":RootCustomControl/Properties[DisabledRendering]",
+              "name": "DisabledRendering",
+              "propertyType": { "__id": ":String" },
+              "defaultValueSource":
+              {
+                "value": "Automatic"
+              }
+            },
+            {
+              "id": ":RootCustomControl/Properties[ReadOnlyRendering]",
+              "name": "ReadOnlyRendering",
+              "propertyType": { "__id": ":String" },
+              "defaultValueSource":
+              {
+                "value": "Automatic"
+              }
+            },
+            {
+              "id": ":RootCustomControl/Properties[ValidationRendering]",
+              "name": "ValidationRendering",
+              "propertyType": { "__id": ":String" },
+              "defaultValueSource":
+              {
+                "value": "Automatic"
+              }
+            }
+          ]
+        },
+        {
+          "id": ":ValueCustomControl",
+          "name": "ValueCustomControl",
+          "attachedLabelSupport": "DisplayedByContainer",
+          "supportedContentItemKind": "Value",
+          "baseControl": { "__id": ":RootCustomControl" },
+          "propertyOverrides":
+          [
+            {
+              "property": { "__id": ":RootControl/Properties[WidthSizingMode]" },
+              "defaultValueSource":
+              {
+                "value": "FitToContent"
+              }
+            }
+          ]
+        },
+        {
+          "id": ":GroupCustomControl",
+          "name": "GroupCustomControl",
+          "attachedLabelSupport": "DisplayedByControl",
+          "supportedContentItemKind": "Group",
+          "baseControl": { "__id": ":RootCustomControl" }
+        },
+        {
+          "id": ":CollectionCustomControl",
+          "name": "CollectionCustomControl",
+          "attachedLabelSupport": "DisplayedByControl",
+          "supportedContentItemKind": "Collection",
+          "baseControl": { "__id": ":RootCustomControl" }
+        },
+        {
+          "id": ":ScreenCustomControl",
+          "name": "ScreenCustomControl",
+          "attachedLabelSupport": "DisplayedByContainer",
+          "supportedContentItemKind": "ScreenContent",
+          "baseControl": { "__id": ":RootCustomControl" }
+        },
+        {
+          "id": ":HTMLShell",
+          "name": "HTMLShell"
+        },
+        {
+          "id": ":HTMLTheme",
+          "name": "HTMLTheme"
+        }
+      ]
+    },
+    {
+      "id": ":!module",
+      "name": "Microsoft.LightSwitch",
+      "globalItems":
+      [
+        {
+          "__isPrimitiveType": 1,
+          "id": ":Binary",
+          "name": "Binary",
+          "jSType": "String",
+          "properties":
+          [
+            {
+              "id": ":Binary/Properties[Size]",
+              "name": "Size",
+              "propertyType": { "__id": ":Int32" }
+            }
+          ]
+        },
+        {
+          "__isPrimitiveType": 1,
+          "id": ":Boolean",
+          "name": "Boolean",
+          "jSType": "Boolean"
+        },
+        {
+          "__isPrimitiveType": 1,
+          "id": ":Byte",
+          "name": "Byte",
+          "jSType": "Number"
+        },
+        {
+          "__isPrimitiveType": 1,
+          "id": ":DateTime",
+          "name": "DateTime",
+          "jSType": "Date",
+          "methods":
+          [
+            {
+              "id": ":DateTime/Methods[AddDays]",
+              "name": "AddDays",
+              "returnType": { "__id": ":DateTime" },
+              "parameters":
+              [
+                {
+                  "id": ":DateTime/Methods[AddDays]/Parameters[Value]",
+                  "name": "Value",
+                  "parameterType": { "__id": ":Int32" }
+                }
+              ]
+            },
+            {
+              "id": ":DateTime/Methods[AddHours]",
+              "name": "AddHours",
+              "returnType": { "__id": ":DateTime" },
+              "parameters":
+              [
+                {
+                  "id": ":DateTime/Methods[AddHours]/Parameters[Value]",
+                  "name": "Value",
+                  "parameterType": { "__id": ":Int32" }
+                }
+              ]
+            },
+            {
+              "id": ":DateTime/Methods[AddMilliSeconds]",
+              "name": "AddMilliSeconds",
+              "returnType": { "__id": ":DateTime" },
+              "parameters":
+              [
+                {
+                  "id": ":DateTime/Methods[AddMilliSeconds]/Parameters[Value]",
+                  "name": "Value",
+                  "parameterType": { "__id": ":Int32" }
+                }
+              ]
+            },
+            {
+              "id": ":DateTime/Methods[AddMinutes]",
+              "name": "AddMinutes",
+              "returnType": { "__id": ":DateTime" },
+              "parameters":
+              [
+                {
+                  "id": ":DateTime/Methods[AddMinutes]/Parameters[Value]",
+                  "name": "Value",
+                  "parameterType": { "__id": ":Int32" }
+                }
+              ]
+            },
+            {
+              "id": ":DateTime/Methods[AddMonths]",
+              "name": "AddMonths",
+              "returnType": { "__id": ":DateTime" },
+              "parameters":
+              [
+                {
+                  "id": ":DateTime/Methods[AddMonths]/Parameters[Value]",
+                  "name": "Value",
+                  "parameterType": { "__id": ":Int32" }
+                }
+              ]
+            },
+            {
+              "id": ":DateTime/Methods[AddSeconds]",
+              "name": "AddSeconds",
+              "returnType": { "__id": ":DateTime" },
+              "parameters":
+              [
+                {
+                  "id": ":DateTime/Methods[AddSeconds]/Parameters[Value]",
+                  "name": "Value",
+                  "parameterType": { "__id": ":Int32" }
+                }
+              ]
+            },
+            {
+              "id": ":DateTime/Methods[AddYears]",
+              "name": "AddYears",
+              "returnType": { "__id": ":DateTime" },
+              "parameters":
+              [
+                {
+                  "id": ":DateTime/Methods[AddYears]/Parameters[Value]",
+                  "name": "Value",
+                  "parameterType": { "__id": ":Int32" }
+                }
+              ]
+            },
+            {
+              "id": ":DateTime/Methods[CompareTo]",
+              "name": "CompareTo",
+              "returnType": { "__id": ":Int32" },
+              "parameters":
+              [
+                {
+                  "id": ":DateTime/Methods[CompareTo]/Parameters[Value]",
+                  "name": "Value",
+                  "parameterType": { "__id": ":DateTime" }
+                }
+              ]
+            }
+          ],
+          "properties":
+          [
+            {
+              "id": ":DateTime/Properties[Date]",
+              "name": "Date",
+              "propertyType": { "__id": ":DateTime" }
+            },
+            {
+              "id": ":DateTime/Properties[Day]",
+              "name": "Day",
+              "propertyType": { "__id": ":Int32" }
+            },
+            {
+              "id": ":DateTime/Properties[DayOfYear]",
+              "name": "DayOfYear",
+              "propertyType": { "__id": ":Int32" }
+            },
+            {
+              "id": ":DateTime/Properties[Hour]",
+              "name": "Hour",
+              "propertyType": { "__id": ":Int32" }
+            },
+            {
+              "id": ":DateTime/Properties[Millisecond]",
+              "name": "Millisecond",
+              "propertyType": { "__id": ":Int32" }
+            },
+            {
+              "id": ":DateTime/Properties[Minute]",
+              "name": "Minute",
+              "propertyType": { "__id": ":Int32" }
+            },
+            {
+              "id": ":DateTime/Properties[Month]",
+              "name": "Month",
+              "propertyType": { "__id": ":Int32" }
+            },
+            {
+              "id": ":DateTime/Properties[Second]",
+              "name": "Second",
+              "propertyType": { "__id": ":Int32" }
+            },
+            {
+              "id": ":DateTime/Properties[Year]",
+              "name": "Year",
+              "propertyType": { "__id": ":Int32" }
+            }
+          ]
+        },
+        {
+          "__isPrimitiveType": 1,
+          "id": ":Decimal",
+          "name": "Decimal",
+          "jSType": "String"
+        },
+        {
+          "__isPrimitiveType": 1,
+          "id": ":Double",
+          "name": "Double",
+          "jSType": "Number"
+        },
+        {
+          "__isPrimitiveType": 1,
+          "id": ":Guid",
+          "name": "Guid",
+          "jSType": "String"
+        },
+        {
+          "__isPrimitiveType": 1,
+          "id": ":Int16",
+          "name": "Int16",
+          "jSType": "Number"
+        },
+        {
+          "__isPrimitiveType": 1,
+          "id": ":Int32",
+          "name": "Int32",
+          "jSType": "Number"
+        },
+        {
+          "__isPrimitiveType": 1,
+          "id": ":Int64",
+          "name": "Int64",
+          "jSType": "String"
+        },
+        {
+          "__isPrimitiveType": 1,
+          "id": ":RowVersion",
+          "name": "RowVersion",
+          "jSType": "Array"
+        },
+        {
+          "__isPrimitiveType": 1,
+          "id": ":SByte",
+          "name": "SByte",
+          "jSType": "Number"
+        },
+        {
+          "__isPrimitiveType": 1,
+          "id": ":Single",
+          "name": "Single",
+          "jSType": "Number"
+        },
+        {
+          "__isPrimitiveType": 1,
+          "id": ":String",
+          "name": "String",
+          "jSType": "String",
+          "methods":
+          [
+            {
+              "id": ":String/Methods[IndexOf]",
+              "name": "IndexOf",
+              "returnType": { "__id": ":Int32" },
+              "parameters":
+              [
+                {
+                  "id": ":String/Methods[IndexOf]/Parameters[Value]",
+                  "name": "Value",
+                  "parameterType": { "__id": ":String" }
+                }
+              ]
+            },
+            {
+              "id": ":String/Methods[LastIndexOf]",
+              "name": "LastIndexOf",
+              "returnType": { "__id": ":Int32" },
+              "parameters":
+              [
+                {
+                  "id": ":String/Methods[LastIndexOf]/Parameters[Value]",
+                  "name": "Value",
+                  "parameterType": { "__id": ":String" }
+                }
+              ]
+            },
+            {
+              "id": ":String/Methods[Substring]",
+              "name": "Substring",
+              "returnType": { "__id": ":String" },
+              "parameters":
+              [
+                {
+                  "id": ":String/Methods[Substring]/Parameters[StartIndex]",
+                  "name": "StartIndex",
+                  "parameterType": { "__id": ":Int32" }
+                },
+                {
+                  "id": ":String/Methods[Substring]/Parameters[Length]",
+                  "name": "Length",
+                  "parameterType": { "__id": ":Int32" }
+                }
+              ]
+            },
+            {
+              "id": ":String/Methods[Concat]",
+              "name": "Concat",
+              "returnType": { "__id": ":String" },
+              "parameters":
+              [
+                {
+                  "id": ":String/Methods[Concat]/Parameters[Values]",
+                  "name": "Values",
+                  "parameterType": { "__id": ":String" }
+                }
+              ]
+            },
+            {
+              "id": ":String/Methods[Remove]",
+              "name": "Remove",
+              "returnType": { "__id": ":String" },
+              "parameters":
+              [
+                {
+                  "id": ":String/Methods[Remove]/Parameters[StartIndex]",
+                  "name": "StartIndex",
+                  "parameterType": { "__id": ":Int32" }
+                },
+                {
+                  "id": ":String/Methods[Remove]/Parameters[Count]",
+                  "name": "Count",
+                  "parameterType": { "__id": ":Int32" }
+                }
+              ]
+            }
+          ],
+          "properties":
+          [
+            {
+              "id": ":String/Properties[Length]",
+              "name": "Length",
+              "propertyType": { "__id": ":Int32" }
+            }
+          ]
+        },
+        {
+          "__isPrimitiveType": 1,
+          "id": ":TimeSpan",
+          "name": "TimeSpan",
+          "jSType": "Object"
+        },
+        {
+          "__isPrimitiveType": 1,
+          "id": ":DateTimeOffset",
+          "name": "DateTimeOffset",
+          "jSType": "Date"
+        },
+        {
+          "id": ":Binary*",
+          "name": "Binary*",
+          "kind": "Enumerable",
+          "elementType": { "__id": ":Binary" }
+        },
+        {
+          "__isNullableType": 1,
+          "id": ":Binary?",
+          "name": "Binary?",
+          "underlyingType": { "__id": ":Binary" }
+        },
+        {
+          "id": ":Binary?*",
+          "name": "Binary?*",
+          "kind": "Enumerable",
+          "elementType": { "__id": ":Binary?" }
+        },
+        {
+          "id": ":Boolean*",
+          "name": "Boolean*",
+          "kind": "Enumerable",
+          "elementType": { "__id": ":Boolean" }
+        },
+        {
+          "__isNullableType": 1,
+          "id": ":Boolean?",
+          "name": "Boolean?",
+          "underlyingType": { "__id": ":Boolean" }
+        },
+        {
+          "id": ":Boolean?*",
+          "name": "Boolean?*",
+          "kind": "Enumerable",
+          "elementType": { "__id": ":Boolean?" }
+        },
+        {
+          "id": ":Byte*",
+          "name": "Byte*",
+          "kind": "Enumerable",
+          "elementType": { "__id": ":Byte" }
+        },
+        {
+          "__isNullableType": 1,
+          "id": ":Byte?",
+          "name": "Byte?",
+          "underlyingType": { "__id": ":Byte" }
+        },
+        {
+          "id": ":Byte?*",
+          "name": "Byte?*",
+          "kind": "Enumerable",
+          "elementType": { "__id": ":Byte?" }
+        },
+        {
+          "id": ":DateTime*",
+          "name": "DateTime*",
+          "kind": "Enumerable",
+          "elementType": { "__id": ":DateTime" }
+        },
+        {
+          "__isNullableType": 1,
+          "id": ":DateTime?",
+          "name": "DateTime?",
+          "underlyingType": { "__id": ":DateTime" }
+        },
+        {
+          "id": ":DateTime?*",
+          "name": "DateTime?*",
+          "kind": "Enumerable",
+          "elementType": { "__id": ":DateTime?" }
+        },
+        {
+          "id": ":Decimal*",
+          "name": "Decimal*",
+          "kind": "Enumerable",
+          "elementType": { "__id": ":Decimal" }
+        },
+        {
+          "__isNullableType": 1,
+          "id": ":Decimal?",
+          "name": "Decimal?",
+          "underlyingType": { "__id": ":Decimal" }
+        },
+        {
+          "id": ":Decimal?*",
+          "name": "Decimal?*",
+          "kind": "Enumerable",
+          "elementType": { "__id": ":Decimal?" }
+        },
+        {
+          "id": ":Double*",
+          "name": "Double*",
+          "kind": "Enumerable",
+          "elementType": { "__id": ":Double" }
+        },
+        {
+          "__isNullableType": 1,
+          "id": ":Double?",
+          "name": "Double?",
+          "underlyingType": { "__id": ":Double" }
+        },
+        {
+          "id": ":Double?*",
+          "name": "Double?*",
+          "kind": "Enumerable",
+          "elementType": { "__id": ":Double?" }
+        },
+        {
+          "id": ":Guid*",
+          "name": "Guid*",
+          "kind": "Enumerable",
+          "elementType": { "__id": ":Guid" }
+        },
+        {
+          "__isNullableType": 1,
+          "id": ":Guid?",
+          "name": "Guid?",
+          "underlyingType": { "__id": ":Guid" }
+        },
+        {
+          "id": ":Guid?*",
+          "name": "Guid?*",
+          "kind": "Enumerable",
+          "elementType": { "__id": ":Guid?" }
+        },
+        {
+          "id": ":Int16*",
+          "name": "Int16*",
+          "kind": "Enumerable",
+          "elementType": { "__id": ":Int16" }
+        },
+        {
+          "__isNullableType": 1,
+          "id": ":Int16?",
+          "name": "Int16?",
+          "underlyingType": { "__id": ":Int16" }
+        },
+        {
+          "id": ":Int16?*",
+          "name": "Int16?*",
+          "kind": "Enumerable",
+          "elementType": { "__id": ":Int16?" }
+        },
+        {
+          "id": ":Int32*",
+          "name": "Int32*",
+          "kind": "Enumerable",
+          "elementType": { "__id": ":Int32" }
+        },
+        {
+          "__isNullableType": 1,
+          "id": ":Int32?",
+          "name": "Int32?",
+          "underlyingType": { "__id": ":Int32" }
+        },
+        {
+          "id": ":Int32?*",
+          "name": "Int32?*",
+          "kind": "Enumerable",
+          "elementType": { "__id": ":Int32?" }
+        },
+        {
+          "id": ":Int64*",
+          "name": "Int64*",
+          "kind": "Enumerable",
+          "elementType": { "__id": ":Int64" }
+        },
+        {
+          "__isNullableType": 1,
+          "id": ":Int64?",
+          "name": "Int64?",
+          "underlyingType": { "__id": ":Int64" }
+        },
+        {
+          "id": ":Int64?*",
+          "name": "Int64?*",
+          "kind": "Enumerable",
+          "elementType": { "__id": ":Int64?" }
+        },
+        {
+          "id": ":RowVersion*",
+          "name": "RowVersion*",
+          "kind": "Enumerable",
+          "elementType": { "__id": ":RowVersion" }
+        },
+        {
+          "__isNullableType": 1,
+          "id": ":RowVersion?",
+          "name": "RowVersion?",
+          "underlyingType": { "__id": ":RowVersion" }
+        },
+        {
+          "id": ":RowVersion?*",
+          "name": "RowVersion?*",
+          "kind": "Enumerable",
+          "elementType": { "__id": ":RowVersion?" }
+        },
+        {
+          "id": ":SByte*",
+          "name": "SByte*",
+          "kind": "Enumerable",
+          "elementType": { "__id": ":SByte" }
+        },
+        {
+          "__isNullableType": 1,
+          "id": ":SByte?",
+          "name": "SByte?",
+          "underlyingType": { "__id": ":SByte" }
+        },
+        {
+          "id": ":SByte?*",
+          "name": "SByte?*",
+          "kind": "Enumerable",
+          "elementType": { "__id": ":SByte?" }
+        },
+        {
+          "id": ":Single*",
+          "name": "Single*",
+          "kind": "Enumerable",
+          "elementType": { "__id": ":Single" }
+        },
+        {
+          "__isNullableType": 1,
+          "id": ":Single?",
+          "name": "Single?",
+          "underlyingType": { "__id": ":Single" }
+        },
+        {
+          "id": ":Single?*",
+          "name": "Single?*",
+          "kind": "Enumerable",
+          "elementType": { "__id": ":Single?" }
+        },
+        {
+          "id": ":String*",
+          "name": "String*",
+          "kind": "Enumerable",
+          "elementType": { "__id": ":String" }
+        },
+        {
+          "__isNullableType": 1,
+          "id": ":String?",
+          "name": "String?",
+          "underlyingType": { "__id": ":String" }
+        },
+        {
+          "id": ":String?*",
+          "name": "String?*",
+          "kind": "Enumerable",
+          "elementType": { "__id": ":String?" }
+        },
+        {
+          "id": ":TimeSpan*",
+          "name": "TimeSpan*",
+          "kind": "Enumerable",
+          "elementType": { "__id": ":TimeSpan" }
+        },
+        {
+          "__isNullableType": 1,
+          "id": ":TimeSpan?",
+          "name": "TimeSpan?",
+          "underlyingType": { "__id": ":TimeSpan" }
+        },
+        {
+          "id": ":TimeSpan?*",
+          "name": "TimeSpan?*",
+          "kind": "Enumerable",
+          "elementType": { "__id": ":TimeSpan?" }
+        },
+        {
+          "id": ":DateTimeOffset*",
+          "name": "DateTimeOffset*",
+          "kind": "Enumerable",
+          "elementType": { "__id": ":DateTimeOffset" }
+        },
+        {
+          "__isNullableType": 1,
+          "id": ":DateTimeOffset?",
+          "name": "DateTimeOffset?",
+          "underlyingType": { "__id": ":DateTimeOffset" }
+        },
+        {
+          "id": ":DateTimeOffset?*",
+          "name": "DateTimeOffset?*",
+          "kind": "Enumerable",
+          "elementType": { "__id": ":DateTimeOffset?" }
+        },
+        {
+          "id": ":Date*",
+          "name": "Date*",
+          "kind": "Enumerable",
+          "elementType": { "__id": ":Date" }
+        },
+        {
+          "__isNullableType": 1,
+          "id": ":Date?",
+          "name": "Date?",
+          "underlyingType": { "__id": ":Date" }
+        },
+        {
+          "id": ":Date?*",
+          "name": "Date?*",
+          "kind": "Enumerable",
+          "elementType": { "__id": ":Date?" }
+        },
+        {
+          "id": ":Person*",
+          "name": "Person*",
+          "kind": "Enumerable",
+          "elementType": { "__id": ":Person" }
+        },
+        {
+          "__isNullableType": 1,
+          "id": ":Person?",
+          "name": "Person?",
+          "underlyingType": { "__id": ":Person" }
+        },
+        {
+          "id": ":Person?*",
+          "name": "Person?*",
+          "kind": "Enumerable",
+          "elementType": { "__id": ":Person?" }
+        },
+        {
+          "id": ":RelativeDates",
+          "name": "RelativeDates",
+          "globalValues":
+          [
+            {
+              "id": ":RelativeDates/GlobalValues[Now]",
+              "name": "Now",
+              "returnType": { "__id": ":DateTime" }
+            },
+            {
+              "id": ":RelativeDates/GlobalValues[Today]",
+              "name": "Today",
+              "returnType": { "__id": ":DateTime" }
+            },
+            {
+              "id": ":RelativeDates/GlobalValues[EndOfDay]",
+              "name": "EndOfDay",
+              "returnType": { "__id": ":DateTime" }
+            },
+            {
+              "id": ":RelativeDates/GlobalValues[StartOfWeek]",
+              "name": "StartOfWeek",
+              "returnType": { "__id": ":DateTime" }
+            },
+            {
+              "id": ":RelativeDates/GlobalValues[EndOfWeek]",
+              "name": "EndOfWeek",
+              "returnType": { "__id": ":DateTime" }
+            },
+            {
+              "id": ":RelativeDates/GlobalValues[StartOfMonth]",
+              "name": "StartOfMonth",
+              "returnType": { "__id": ":DateTime" }
+            },
+            {
+              "id": ":RelativeDates/GlobalValues[EndOfMonth]",
+              "name": "EndOfMonth",
+              "returnType": { "__id": ":DateTime" }
+            },
+            {
+              "id": ":RelativeDates/GlobalValues[StartOfQuarter]",
+              "name": "StartOfQuarter",
+              "returnType": { "__id": ":DateTime" }
+            },
+            {
+              "id": ":RelativeDates/GlobalValues[EndOfQuarter]",
+              "name": "EndOfQuarter",
+              "returnType": { "__id": ":DateTime" }
+            },
+            {
+              "id": ":RelativeDates/GlobalValues[StartOfYear]",
+              "name": "StartOfYear",
+              "returnType": { "__id": ":DateTime" }
+            },
+            {
+              "id": ":RelativeDates/GlobalValues[EndOfYear]",
+              "name": "EndOfYear",
+              "returnType": { "__id": ":DateTime" }
+            }
+          ]
+        },
+        {
+          "id": ":RelativeDateTimeOffsetDates",
+          "name": "RelativeDateTimeOffsetDates",
+          "globalValues":
+          [
+            {
+              "id": ":RelativeDateTimeOffsetDates/GlobalValues[Now]",
+              "name": "Now",
+              "returnType": { "__id": ":DateTimeOffset" }
+            },
+            {
+              "id": ":RelativeDateTimeOffsetDates/GlobalValues[Today]",
+              "name": "Today",
+              "returnType": { "__id": ":DateTimeOffset" }
+            },
+            {
+              "id": ":RelativeDateTimeOffsetDates/GlobalValues[EndOfDay]",
+              "name": "EndOfDay",
+              "returnType": { "__id": ":DateTimeOffset" }
+            },
+            {
+              "id": ":RelativeDateTimeOffsetDates/GlobalValues[StartOfWeek]",
+              "name": "StartOfWeek",
+              "returnType": { "__id": ":DateTimeOffset" }
+            },
+            {
+              "id": ":RelativeDateTimeOffsetDates/GlobalValues[EndOfWeek]",
+              "name": "EndOfWeek",
+              "returnType": { "__id": ":DateTimeOffset" }
+            },
+            {
+              "id": ":RelativeDateTimeOffsetDates/GlobalValues[StartOfMonth]",
+              "name": "StartOfMonth",
+              "returnType": { "__id": ":DateTimeOffset" }
+            },
+            {
+              "id": ":RelativeDateTimeOffsetDates/GlobalValues[EndOfMonth]",
+              "name": "EndOfMonth",
+              "returnType": { "__id": ":DateTimeOffset" }
+            },
+            {
+              "id": ":RelativeDateTimeOffsetDates/GlobalValues[StartOfQuarter]",
+              "name": "StartOfQuarter",
+              "returnType": { "__id": ":DateTimeOffset" }
+            },
+            {
+              "id": ":RelativeDateTimeOffsetDates/GlobalValues[EndOfQuarter]",
+              "name": "EndOfQuarter",
+              "returnType": { "__id": ":DateTimeOffset" }
+            },
+            {
+              "id": ":RelativeDateTimeOffsetDates/GlobalValues[StartOfYear]",
+              "name": "StartOfYear",
+              "returnType": { "__id": ":DateTimeOffset" }
+            },
+            {
+              "id": ":RelativeDateTimeOffsetDates/GlobalValues[EndOfYear]",
+              "name": "EndOfYear",
+              "returnType": { "__id": ":DateTimeOffset" }
+            }
+          ]
+        },
+        {
+          "id": ":WellKnownPeople",
+          "name": "WellKnownPeople",
+          "globalValues":
+          [
+            {
+              "id": ":WellKnownPeople/GlobalValues[CurrentUser]",
+              "name": "CurrentUser",
+              "returnType": { "__id": ":Person" }
+            },
+            {
+              "id": ":WellKnownPeople/GlobalValues[AnonymousUser]",
+              "name": "AnonymousUser",
+              "returnType": { "__id": ":Person" }
+            }
+          ]
+        },
+        {
+          "__isSemanticType": 1,
+          "id": ":Date",
+          "name": "Date",
+          "underlyingType": { "__id": ":DateTime" }
+        },
+        {
+          "__isSemanticType": 1,
+          "id": ":Person",
+          "name": "Person",
+          "underlyingType": { "__id": ":String" }
+        }
+      ]
+    },
+    {
+      "id": "Microsoft.LightSwitch.Cosmopolitan:!module",
+      "name": "Microsoft.LightSwitch.Cosmopolitan",
+      "globalItems":
+      [
+        {
+          "id": "Microsoft.LightSwitch.Cosmopolitan:CosmopolitanShell",
+          "name": "CosmopolitanShell"
+        },
+        {
+          "id": "Microsoft.LightSwitch.Cosmopolitan:CosmopolitanTheme",
+          "name": "CosmopolitanTheme"
+        }
+      ]
+    },
+    {
+      "id": "Microsoft.LightSwitch.Extensions:!module",
+      "name": "Microsoft.LightSwitch.Extensions",
+      "globalItems":
+      [
+        {
+          "id": "Microsoft.LightSwitch.Extensions:EmailAddress*",
+          "name": "EmailAddress*",
+          "kind": "Enumerable",
+          "elementType": { "__id": "Microsoft.LightSwitch.Extensions:EmailAddress" }
+        },
+        {
+          "__isNullableType": 1,
+          "id": "Microsoft.LightSwitch.Extensions:EmailAddress?",
+          "name": "EmailAddress?",
+          "underlyingType": { "__id": "Microsoft.LightSwitch.Extensions:EmailAddress" }
+        },
+        {
+          "id": "Microsoft.LightSwitch.Extensions:EmailAddress?*",
+          "name": "EmailAddress?*",
+          "kind": "Enumerable",
+          "elementType": { "__id": "Microsoft.LightSwitch.Extensions:EmailAddress?" }
+        },
+        {
+          "id": "Microsoft.LightSwitch.Extensions:Image*",
+          "name": "Image*",
+          "kind": "Enumerable",
+          "elementType": { "__id": "Microsoft.LightSwitch.Extensions:Image" }
+        },
+        {
+          "__isNullableType": 1,
+          "id": "Microsoft.LightSwitch.Extensions:Image?",
+          "name": "Image?",
+          "underlyingType": { "__id": "Microsoft.LightSwitch.Extensions:Image" }
+        },
+        {
+          "id": "Microsoft.LightSwitch.Extensions:Image?*",
+          "name": "Image?*",
+          "kind": "Enumerable",
+          "elementType": { "__id": "Microsoft.LightSwitch.Extensions:Image?" }
+        },
+        {
+          "id": "Microsoft.LightSwitch.Extensions:Money*",
+          "name": "Money*",
+          "kind": "Enumerable",
+          "elementType": { "__id": "Microsoft.LightSwitch.Extensions:Money" }
+        },
+        {
+          "__isNullableType": 1,
+          "id": "Microsoft.LightSwitch.Extensions:Money?",
+          "name": "Money?",
+          "underlyingType": { "__id": "Microsoft.LightSwitch.Extensions:Money" }
+        },
+        {
+          "id": "Microsoft.LightSwitch.Extensions:Money?*",
+          "name": "Money?*",
+          "kind": "Enumerable",
+          "elementType": { "__id": "Microsoft.LightSwitch.Extensions:Money?" }
+        },
+        {
+          "id": "Microsoft.LightSwitch.Extensions:PhoneNumber*",
+          "name": "PhoneNumber*",
+          "kind": "Enumerable",
+          "elementType": { "__id": "Microsoft.LightSwitch.Extensions:PhoneNumber" }
+        },
+        {
+          "__isNullableType": 1,
+          "id": "Microsoft.LightSwitch.Extensions:PhoneNumber?",
+          "name": "PhoneNumber?",
+          "underlyingType": { "__id": "Microsoft.LightSwitch.Extensions:PhoneNumber" }
+        },
+        {
+          "id": "Microsoft.LightSwitch.Extensions:PhoneNumber?*",
+          "name": "PhoneNumber?*",
+          "kind": "Enumerable",
+          "elementType": { "__id": "Microsoft.LightSwitch.Extensions:PhoneNumber?" }
+        },
+        {
+          "id": "Microsoft.LightSwitch.Extensions:Percent*",
+          "name": "Percent*",
+          "kind": "Enumerable",
+          "elementType": { "__id": "Microsoft.LightSwitch.Extensions:Percent" }
+        },
+        {
+          "__isNullableType": 1,
+          "id": "Microsoft.LightSwitch.Extensions:Percent?",
+          "name": "Percent?",
+          "underlyingType": { "__id": "Microsoft.LightSwitch.Extensions:Percent" }
+        },
+        {
+          "id": "Microsoft.LightSwitch.Extensions:Percent?*",
+          "name": "Percent?*",
+          "kind": "Enumerable",
+          "elementType": { "__id": "Microsoft.LightSwitch.Extensions:Percent?" }
+        },
+        {
+          "id": "Microsoft.LightSwitch.Extensions:WebAddress*",
+          "name": "WebAddress*",
+          "kind": "Enumerable",
+          "elementType": { "__id": "Microsoft.LightSwitch.Extensions:WebAddress" }
+        },
+        {
+          "__isNullableType": 1,
+          "id": "Microsoft.LightSwitch.Extensions:WebAddress?",
+          "name": "WebAddress?",
+          "underlyingType": { "__id": "Microsoft.LightSwitch.Extensions:WebAddress" }
+        },
+        {
+          "id": "Microsoft.LightSwitch.Extensions:WebAddress?*",
+          "name": "WebAddress?*",
+          "kind": "Enumerable",
+          "elementType": { "__id": "Microsoft.LightSwitch.Extensions:WebAddress?" }
+        },
+        {
+          "__isSemanticType": 1,
+          "id": "Microsoft.LightSwitch.Extensions:EmailAddress",
+          "name": "EmailAddress",
+          "underlyingType": { "__id": ":String" }
+        },
+        {
+          "__isSemanticType": 1,
+          "id": "Microsoft.LightSwitch.Extensions:Image",
+          "name": "Image",
+          "underlyingType": { "__id": ":Binary" }
+        },
+        {
+          "__isSemanticType": 1,
+          "id": "Microsoft.LightSwitch.Extensions:Money",
+          "name": "Money",
+          "underlyingType": { "__id": ":Decimal" }
+        },
+        {
+          "__isSemanticType": 1,
+          "id": "Microsoft.LightSwitch.Extensions:PhoneNumber",
+          "name": "PhoneNumber",
+          "underlyingType": { "__id": ":String" }
+        },
+        {
+          "__isSemanticType": 1,
+          "id": "Microsoft.LightSwitch.Extensions:Percent",
+          "name": "Percent",
+          "underlyingType": { "__id": ":Decimal" },
+          ":@DecimalConstraint":
+          {
+            "scale": 9
+          }
+        },
+        {
+          "__isSemanticType": 1,
+          "id": "Microsoft.LightSwitch.Extensions:WebAddress",
+          "name": "WebAddress",
+          "underlyingType": { "__id": ":String" }
+        }
+      ]
+    },
+    {
+      "homeScreen": { "__id": "Main" },
+      "id": "!module",
+      "name": "LightSwitchApplication.TellemCSharp.HTMLClient",
+      "logo": "/Content/Images/logo.png",
+      "targetPlatform": "MobileWeb",
+      "version": "1.0.0.0",
+      "shell": { "__id": ":HTMLShell" },
+      "theme": { "__id": ":HTMLTheme" },
+      ":@ModuleNamespace": { "namespace": "LightSwitchApplication" },
+      ":@Partial": { "isPrimary": true },
+      ":@HomeScreen": { "value": { "__id": "Main" } },
+      "globalItems":
+      [
+        {
+          "id": "DataWorkspace",
+          "name": "DataWorkspace",
+          "members":
+          [
+            {
+              "id": "DataWorkspace/Members[TellemData]",
+              "name": "TellemData",
+              "entityContainer": { "__id": "TellemData" }
+            }
+          ]
+        },
+        {
+          "id": "LightSwitchServiceApplicationGroup",
+          "name": "LightSwitchServiceApplicationGroup"
+        },
+        {
+          "id": "User",
+          "name": "User"
+        },
+        {
+          "id": "Tellem",
+          "name": "Tellem"
+        },
+        {
+          "id": "Message*",
+          "name": "Message*",
+          "kind": "Enumerable",
+          "elementType": { "__id": "Message" }
+        },
+        {
+          "id": "CollectionView$Message",
+          "name": "CollectionView$Message",
+          "kind": "CollectionView",
+          "elementType": { "__id": "Message" },
+          "methods":
+          [
+            {
+              "id": "CollectionView$Message/Methods[addNew]",
+              "name": "addNew",
+              "returnType": { "__id": "Message" }
+            },
+            {
+              "id": "CollectionView$Message/Methods[addAndEditNew]",
+              "name": "addAndEditNew",
+              "returnType": { "__id": "Message" }
+            },
+            {
+              "id": "CollectionView$Message/Methods[editSelected]",
+              "name": "editSelected"
+            },
+            {
+              "id": "CollectionView$Message/Methods[deleteSelected]",
+              "name": "deleteSelected"
+            },
+            {
+              "id": "CollectionView$Message/Methods[removeSelected]",
+              "name": "removeSelected"
+            },
+            {
+              "id": "CollectionView$Message/Methods[refresh]",
+              "name": "refresh"
+            },
+            {
+              "id": "CollectionView$Message/Methods[viewSelected]",
+              "name": "viewSelected"
+            }
+          ],
+          "properties":
+          [
+            {
+              "id": "CollectionView$Message/Properties[selectedItem]",
+              "name": "selectedItem",
+              "propertyType": { "__id": "Message" }
+            }
+          ]
+        },
+        {
+          "id": "Mood*",
+          "name": "Mood*",
+          "kind": "Enumerable",
+          "elementType": { "__id": "Mood" }
+        },
+        {
+          "id": "CollectionView$Mood",
+          "name": "CollectionView$Mood",
+          "kind": "CollectionView",
+          "elementType": { "__id": "Mood" },
+          "methods":
+          [
+            {
+              "id": "CollectionView$Mood/Methods[addNew]",
+              "name": "addNew",
+              "returnType": { "__id": "Mood" }
+            },
+            {
+              "id": "CollectionView$Mood/Methods[addAndEditNew]",
+              "name": "addAndEditNew",
+              "returnType": { "__id": "Mood" }
+            },
+            {
+              "id": "CollectionView$Mood/Methods[editSelected]",
+              "name": "editSelected"
+            },
+            {
+              "id": "CollectionView$Mood/Methods[deleteSelected]",
+              "name": "deleteSelected"
+            },
+            {
+              "id": "CollectionView$Mood/Methods[removeSelected]",
+              "name": "removeSelected"
+            },
+            {
+              "id": "CollectionView$Mood/Methods[refresh]",
+              "name": "refresh"
+            },
+            {
+              "id": "CollectionView$Mood/Methods[viewSelected]",
+              "name": "viewSelected"
+            }
+          ],
+          "properties":
+          [
+            {
+              "id": "CollectionView$Mood/Properties[selectedItem]",
+              "name": "selectedItem",
+              "propertyType": { "__id": "Mood" }
+            }
+          ]
+        },
+        {
+          "id": "Company*",
+          "name": "Company*",
+          "kind": "Enumerable",
+          "elementType": { "__id": "Company" }
+        },
+        {
+          "id": "CollectionView$Company",
+          "name": "CollectionView$Company",
+          "kind": "CollectionView",
+          "elementType": { "__id": "Company" },
+          "methods":
+          [
+            {
+              "id": "CollectionView$Company/Methods[addNew]",
+              "name": "addNew",
+              "returnType": { "__id": "Company" }
+            },
+            {
+              "id": "CollectionView$Company/Methods[addAndEditNew]",
+              "name": "addAndEditNew",
+              "returnType": { "__id": "Company" }
+            },
+            {
+              "id": "CollectionView$Company/Methods[editSelected]",
+              "name": "editSelected"
+            },
+            {
+              "id": "CollectionView$Company/Methods[deleteSelected]",
+              "name": "deleteSelected"
+            },
+            {
+              "id": "CollectionView$Company/Methods[removeSelected]",
+              "name": "removeSelected"
+            },
+            {
+              "id": "CollectionView$Company/Methods[refresh]",
+              "name": "refresh"
+            },
+            {
+              "id": "CollectionView$Company/Methods[viewSelected]",
+              "name": "viewSelected"
+            }
+          ],
+          "properties":
+          [
+            {
+              "id": "CollectionView$Company/Properties[selectedItem]",
+              "name": "selectedItem",
+              "propertyType": { "__id": "Company" }
+            }
+          ]
+        },
+        {
+          "id": "Feedback*",
+          "name": "Feedback*",
+          "kind": "Enumerable",
+          "elementType": { "__id": "Feedback" }
+        },
+        {
+          "id": "CollectionView$Feedback",
+          "name": "CollectionView$Feedback",
+          "kind": "CollectionView",
+          "elementType": { "__id": "Feedback" },
+          "methods":
+          [
+            {
+              "id": "CollectionView$Feedback/Methods[addNew]",
+              "name": "addNew",
+              "returnType": { "__id": "Feedback" }
+            },
+            {
+              "id": "CollectionView$Feedback/Methods[addAndEditNew]",
+              "name": "addAndEditNew",
+              "returnType": { "__id": "Feedback" }
+            },
+            {
+              "id": "CollectionView$Feedback/Methods[editSelected]",
+              "name": "editSelected"
+            },
+            {
+              "id": "CollectionView$Feedback/Methods[deleteSelected]",
+              "name": "deleteSelected"
+            },
+            {
+              "id": "CollectionView$Feedback/Methods[removeSelected]",
+              "name": "removeSelected"
+            },
+            {
+              "id": "CollectionView$Feedback/Methods[refresh]",
+              "name": "refresh"
+            },
+            {
+              "id": "CollectionView$Feedback/Methods[viewSelected]",
+              "name": "viewSelected"
+            }
+          ],
+          "properties":
+          [
+            {
+              "id": "CollectionView$Feedback/Properties[selectedItem]",
+              "name": "selectedItem",
+              "propertyType": { "__id": "Feedback" }
+            }
+          ]
+        },
+        {
+          "__isEntityType": 1,
+          ":@SummaryProperty": { "property": { "__id": "Feedback/Properties[Company]" } },
+          "id": "Feedback",
+          "name": "Feedback",
+          ":@DefaultScreen":
+          {
+            "value": { "__id": "ViewFeedback" },
+            ":@ScreenParameterMapping":
+            {
+              "screenParameter": { "__id": "ViewFeedback/Properties[Feedback]" }
+            }
+          },
+          "methods":
+          [
+            {
+              "id": "Feedback/Methods[deleteEntity]",
+              "name": "deleteEntity"
+            },
+            {
+              "id": "Feedback/Methods[edit]",
+              "name": "edit"
+            },
+            {
+              "id": "Feedback/Methods[view]",
+              "name": "view"
+            }
+          ],
+          "properties":
+          [
+            {
+              "__isKeyProperty": 1,
+              "id": "Feedback/Properties[ID]",
+              "name": "ID",
+              "isReadOnly": true,
+              "propertyType": { "__id": ":Int32" },
+              ":@Hidden": { },
+              ":@Required": { },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "Feedback/Properties[Company]",
+              "name": "Company",
+              "propertyType": { "__id": ":String?" },
+              ":@MaxLength":
+              {
+                "value": 100
+              }
+            },
+            {
+              "id": "Feedback/Properties[Location]",
+              "name": "Location",
+              "propertyType": { "__id": ":String?" },
+              ":@MaxLength":
+              {
+                "value": 100
+              }
+            },
+            {
+              "id": "Feedback/Properties[Employee]",
+              "name": "Employee",
+              "propertyType": { "__id": ":String?" },
+              ":@MaxLength":
+              {
+                "value": 100
+              }
+            },
+            {
+              "id": "Feedback/Properties[Comment]",
+              "name": "Comment",
+              "propertyType": { "__id": ":String?" },
+              ":@NotSortable": { },
+              ":@MaxLength":
+              {
+              },
+              ":@AnsiConstraint": { }
+            },
+            {
+              "id": "Feedback/Properties[UserID]",
+              "name": "UserID",
+              "propertyType": { "__id": ":String?" },
+              ":@MaxLength":
+              {
+                "value": 50
+              }
+            },
+            {
+              "id": "Feedback/Properties[DateCreated]",
+              "name": "DateCreated",
+              "propertyType": { "__id": ":DateTime?" },
+              ":@DateTimeConstraint":
+              {
+                "kind": "Unspecified",
+                "precision": 3,
+                "preserveSeconds": true
+              },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "Feedback/Properties[Mood1]",
+              "name": "Mood1",
+              "association": { "__id": "FK_Feedback_Mood" },
+              "elementType": { "__id": "Mood" },
+              "fromEnd": { "__id": "FK_Feedback_Mood/Ends[Feedback]" },
+              "propertyType": { "__id": "Mood" },
+              "toEnd": { "__id": "FK_Feedback_Mood/Ends[Mood]" }
+            },
+            {
+              "id": "Feedback/Properties[Product]",
+              "name": "Product",
+              "propertyType": { "__id": ":String?" },
+              ":@MaxLength":
+              {
+              }
+            }
+          ]
+        },
+        {
+          "__isEntityType": 1,
+          ":@SummaryProperty": { "property": { "__id": "Company/Properties[Company_Name]" } },
+          "id": "Company",
+          "name": "Company",
+          "methods":
+          [
+            {
+              "id": "Company/Methods[deleteEntity]",
+              "name": "deleteEntity"
+            },
+            {
+              "id": "Company/Methods[edit]",
+              "name": "edit"
+            },
+            {
+              "id": "Company/Methods[view]",
+              "name": "view"
+            }
+          ],
+          "properties":
+          [
+            {
+              "__isKeyProperty": 1,
+              "id": "Company/Properties[ID]",
+              "name": "ID",
+              "isReadOnly": true,
+              "propertyType": { "__id": ":Int32" },
+              ":@Hidden": { },
+              ":@Required": { },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "Company/Properties[Company_Name]",
+              "name": "Company_Name",
+              "propertyType": { "__id": ":String?" },
+              ":@MaxLength":
+              {
+                "value": 100
+              }
+            },
+            {
+              "id": "Company/Properties[Longitude]",
+              "name": "Longitude",
+              "propertyType": { "__id": ":Double?" },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "Company/Properties[Latitude]",
+              "name": "Latitude",
+              "propertyType": { "__id": ":Double?" },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "Company/Properties[Active]",
+              "name": "Active",
+              "propertyType": { "__id": ":Boolean?" },
+              ":@NotSearchable": { }
+            }
+          ]
+        },
+        {
+          "__isEntityType": 1,
+          ":@SummaryProperty": { "property": { "__id": "Mood/Properties[Description]" } },
+          "id": "Mood",
+          "name": "Mood",
+          "methods":
+          [
+            {
+              "id": "Mood/Methods[deleteEntity]",
+              "name": "deleteEntity"
+            },
+            {
+              "id": "Mood/Methods[edit]",
+              "name": "edit"
+            },
+            {
+              "id": "Mood/Methods[view]",
+              "name": "view"
+            }
+          ],
+          "properties":
+          [
+            {
+              "__isKeyProperty": 1,
+              "id": "Mood/Properties[ID]",
+              "name": "ID",
+              "propertyType": { "__id": ":Int32" },
+              ":@Required": { },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "Mood/Properties[Description]",
+              "name": "Description",
+              "propertyType": { "__id": ":String?" },
+              ":@MaxLength":
+              {
+                "value": 100
+              }
+            },
+            {
+              "id": "Mood/Properties[Emoticon]",
+              "name": "Emoticon",
+              "propertyType": { "__id": ":Binary?" },
+              ":@NotSortable": { },
+              ":@MaxLength":
+              {
+              },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "Mood/Properties[Feedbacks]",
+              "name": "Feedbacks",
+              "association": { "__id": "FK_Feedback_Mood" },
+              "elementType": { "__id": "Feedback" },
+              "fromEnd": { "__id": "FK_Feedback_Mood/Ends[Mood]" },
+              "propertyType": { "__id": "Feedback*" },
+              "toEnd": { "__id": "FK_Feedback_Mood/Ends[Feedback]" }
+            }
+          ]
+        },
+        {
+          "id": "FK_Feedback_Mood",
+          "name": "FK_Feedback_Mood",
+          "ends":
+          [
+            {
+              "id": "FK_Feedback_Mood/Ends[Mood]",
+              "name": "Mood",
+              "multiplicity": "ZeroOrOne",
+              "entityType": { "__id": "Mood" },
+              ":@DeleteRule": { "action": "Unset" }
+            },
+            {
+              "id": "FK_Feedback_Mood/Ends[Feedback]",
+              "name": "Feedback",
+              "multiplicity": "Many",
+              "entityType": { "__id": "Feedback" }
+            }
+          ]
+        },
+        {
+          "id": "TellemData",
+          "name": "TellemData",
+          ":@Partial": { "isPrimary": true },
+          "associationSets":
+          [
+            {
+              "id": "TellemData/Members[FK_Feedback_Mood]",
+              "name": "FK_Feedback_Mood",
+              "association": { "__id": "FK_Feedback_Mood" },
+              "ends":
+              [
+                {
+                  "properties": [ "ID" ],
+                  "id": "TellemData/Members[FK_Feedback_Mood]/Members[Mood]",
+                  "name": "Mood",
+                  "entitySet": { "__id": "TellemData/Members[Moods]" }
+                },
+                {
+                  "properties": [ "Mood" ],
+                  "id": "TellemData/Members[FK_Feedback_Mood]/Members[Feedback]",
+                  "name": "Feedback",
+                  "entitySet": { "__id": "TellemData/Members[Feedbacks]" }
+                }
+              ]
+            }
+          ],
+          "entitySets":
+          [
+            {
+              "id": "TellemData/Members[Companys]",
+              "name": "Companys",
+              "canDelete": true,
+              "canInsert": true,
+              "canUpdate": true,
+              "elementType": { "__id": "Company" },
+              "entityType": { "__id": "Company" }
+            },
+            {
+              "id": "TellemData/Members[Feedbacks]",
+              "name": "Feedbacks",
+              "canDelete": true,
+              "canInsert": true,
+              "canUpdate": true,
+              "elementType": { "__id": "Feedback" },
+              "entityType": { "__id": "Feedback" }
+            },
+            {
+              "id": "TellemData/Members[Messages]",
+              "name": "Messages",
+              "canDelete": true,
+              "canInsert": true,
+              "canUpdate": true,
+              "elementType": { "__id": "Message" },
+              "entityType": { "__id": "Message" }
+            },
+            {
+              "id": "TellemData/Members[Moods]",
+              "name": "Moods",
+              "canDelete": true,
+              "canInsert": true,
+              "canUpdate": true,
+              "elementType": { "__id": "Mood" },
+              "entityType": { "__id": "Mood" }
+            }
+          ],
+          "queryOperations":
+          [
+            {
+              "id": "TellemData/Members[Companys_Single]",
+              "name": "Companys_Single",
+              "elementType": { "__id": "Company" },
+              "query": { "__id": "TellemData/Members[Companys_Single]" },
+              "returnType": { "__id": "Company" },
+              "source":
+              {
+                "member": { "__id": "TellemData/Members[Companys]" }
+              },
+              "parameters":
+              [
+                {
+                  "id": "TellemData/Members[Companys_Single]/Parameters[ID]",
+                  "name": "ID",
+                  "parameterType": { "__id": ":Int32?" }
+                }
+              ]
+            },
+            {
+              "id": "TellemData/Members[Companys_SingleOrDefault]",
+              "name": "Companys_SingleOrDefault",
+              "elementType": { "__id": "Company" },
+              "query": { "__id": "TellemData/Members[Companys_SingleOrDefault]" },
+              "returnType": { "__id": "Company" },
+              "source":
+              {
+                "member": { "__id": "TellemData/Members[Companys]" }
+              },
+              "parameters":
+              [
+                {
+                  "id": "TellemData/Members[Companys_SingleOrDefault]/Parameters[ID]",
+                  "name": "ID",
+                  "parameterType": { "__id": ":Int32?" }
+                }
+              ]
+            },
+            {
+              "id": "TellemData/Members[Feedbacks_Single]",
+              "name": "Feedbacks_Single",
+              "elementType": { "__id": "Feedback" },
+              "query": { "__id": "TellemData/Members[Feedbacks_Single]" },
+              "returnType": { "__id": "Feedback" },
+              "source":
+              {
+                "member": { "__id": "TellemData/Members[Feedbacks]" }
+              },
+              "parameters":
+              [
+                {
+                  "id": "TellemData/Members[Feedbacks_Single]/Parameters[ID]",
+                  "name": "ID",
+                  "parameterType": { "__id": ":Int32?" }
+                }
+              ]
+            },
+            {
+              "id": "TellemData/Members[Feedbacks_SingleOrDefault]",
+              "name": "Feedbacks_SingleOrDefault",
+              "elementType": { "__id": "Feedback" },
+              "query": { "__id": "TellemData/Members[Feedbacks_SingleOrDefault]" },
+              "returnType": { "__id": "Feedback" },
+              "source":
+              {
+                "member": { "__id": "TellemData/Members[Feedbacks]" }
+              },
+              "parameters":
+              [
+                {
+                  "id": "TellemData/Members[Feedbacks_SingleOrDefault]/Parameters[ID]",
+                  "name": "ID",
+                  "parameterType": { "__id": ":Int32?" }
+                }
+              ]
+            },
+            {
+              "id": "TellemData/Members[qryMyFeedback]",
+              "name": "qryMyFeedback",
+              "elementType": { "__id": "Feedback" },
+              "query": { "__id": "TellemData/Members[qryMyFeedback]" },
+              "returnType": { "__id": "Feedback*" },
+              "source":
+              {
+                "member": { "__id": "TellemData/Members[Feedbacks]" }
+              }
+            },
+            {
+              "id": "TellemData/Members[Messages_Single]",
+              "name": "Messages_Single",
+              "elementType": { "__id": "Message" },
+              "query": { "__id": "TellemData/Members[Messages_Single]" },
+              "returnType": { "__id": "Message" },
+              "source":
+              {
+                "member": { "__id": "TellemData/Members[Messages]" }
+              },
+              "parameters":
+              [
+                {
+                  "id": "TellemData/Members[Messages_Single]/Parameters[ID]",
+                  "name": "ID",
+                  "parameterType": { "__id": ":Int64?" }
+                }
+              ]
+            },
+            {
+              "id": "TellemData/Members[Messages_SingleOrDefault]",
+              "name": "Messages_SingleOrDefault",
+              "elementType": { "__id": "Message" },
+              "query": { "__id": "TellemData/Members[Messages_SingleOrDefault]" },
+              "returnType": { "__id": "Message" },
+              "source":
+              {
+                "member": { "__id": "TellemData/Members[Messages]" }
+              },
+              "parameters":
+              [
+                {
+                  "id": "TellemData/Members[Messages_SingleOrDefault]/Parameters[ID]",
+                  "name": "ID",
+                  "parameterType": { "__id": ":Int64?" }
+                }
+              ]
+            },
+            {
+              "id": "TellemData/Members[Moods_Single]",
+              "name": "Moods_Single",
+              "elementType": { "__id": "Mood" },
+              "query": { "__id": "TellemData/Members[Moods_Single]" },
+              "returnType": { "__id": "Mood" },
+              "source":
+              {
+                "member": { "__id": "TellemData/Members[Moods]" }
+              },
+              "parameters":
+              [
+                {
+                  "id": "TellemData/Members[Moods_Single]/Parameters[ID]",
+                  "name": "ID",
+                  "parameterType": { "__id": ":Int32?" }
+                }
+              ]
+            },
+            {
+              "id": "TellemData/Members[Moods_SingleOrDefault]",
+              "name": "Moods_SingleOrDefault",
+              "elementType": { "__id": "Mood" },
+              "query": { "__id": "TellemData/Members[Moods_SingleOrDefault]" },
+              "returnType": { "__id": "Mood" },
+              "source":
+              {
+                "member": { "__id": "TellemData/Members[Moods]" }
+              },
+              "parameters":
+              [
+                {
+                  "id": "TellemData/Members[Moods_SingleOrDefault]/Parameters[ID]",
+                  "name": "ID",
+                  "parameterType": { "__id": ":Int32?" }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "__isEntityType": 1,
+          ":@SummaryProperty": { "property": { "__id": "Message/Properties[MessageName]" } },
+          "id": "Message",
+          "name": "Message",
+          "methods":
+          [
+            {
+              "id": "Message/Methods[deleteEntity]",
+              "name": "deleteEntity"
+            },
+            {
+              "id": "Message/Methods[edit]",
+              "name": "edit"
+            },
+            {
+              "id": "Message/Methods[view]",
+              "name": "view"
+            }
+          ],
+          "properties":
+          [
+            {
+              "__isKeyProperty": 1,
+              "id": "Message/Properties[ID]",
+              "name": "ID",
+              "isReadOnly": true,
+              "propertyType": { "__id": ":Int64" },
+              ":@Hidden": { },
+              ":@Required": { },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "Message/Properties[MessageName]",
+              "name": "MessageName",
+              "propertyType": { "__id": ":String?" },
+              ":@MaxLength":
+              {
+              }
+            },
+            {
+              "id": "Message/Properties[Message1]",
+              "name": "Message1",
+              "propertyType": { "__id": ":String?" },
+              ":@MaxLength":
+              {
+              }
+            }
+          ]
+        },
+        {
+          "displayName": "About",
+          "id": "About",
+          "name": "About",
+          "launchMode": "Single",
+          ":@SaveChangesTo":
+          {
+            "property": { "__id": "DataWorkspace/Members[TellemData]" }
+          },
+          "rootContentItem":
+          {
+            "displayName": "Root Content Item",
+            "name": "RootContentItem",
+            "kind": "Screen",
+            "view": { "__id": ":Screen" },
+            "childContentItems":
+            [
+              {
+                "displayName": "Tabs",
+                "name": "Tabs",
+                "kind": "Group",
+                "view": { "__id": ":TabPages" },
+                "childContentItems":
+                [
+                  {
+                    "displayName": "Feedback List",
+                    "name": "FeedbackList",
+                    "kind": "Tab",
+                    "view": { "__id": ":RowsLayout" },
+                    "childContentItems":
+                    [
+                      {
+                        "displayName": "<p>Tellem is an app that connects customers to businesses.</p><p>Our immediate focus is to provide a mobile application for customer feedback.</p>Tellem IS:<ul><li>A quick and easy way for consumers to provide feedback direct to a business.</li><li>A new contact point for business seeking ways to improve their service offering</li></ul>Tellem is NOT:<ul><li>Social media – we send feedback from customers direct to businesses, not published on sites such as Facebook or Twitter</li><li>A Survey – We employ a one-page-only approach. Tell’em then move on.</li></ul>",
+                        "name": "AboutText",
+                        "kind": "Value",
+                        "view": { "__id": ":Text" },
+                        "dataSource":
+                        {
+                          "member": { "__id": "About/Properties[AboutText]" }
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "propertySources":
+                [
+                  {
+                    "property": { "__id": ":RootControl/Properties[BrowseOnly]" },
+                    "value": true
+                  }
+                ]
+              },
+              {
+                "displayName": "Popups",
+                "name": "Popups",
+                "kind": "Group",
+                "view": { "__id": ":DialogPages" }
+              }
+            ]
+          },
+          "methods":
+          [
+            {
+              "id": "About/Methods[showTab]",
+              "name": "showTab",
+              "parameters":
+              [
+                {
+                  "id": "About/Methods[showTab]/Parameters[tabName]",
+                  "name": "tabName",
+                  "parameterType": { "__id": ":String" }
+                }
+              ]
+            },
+            {
+              "id": "About/Methods[showDialog]",
+              "name": "showDialog",
+              "parameters":
+              [
+                {
+                  "id": "About/Methods[showDialog]/Parameters[dialogName]",
+                  "name": "dialogName",
+                  "parameterType": { "__id": ":String" }
+                }
+              ]
+            }
+          ],
+          "properties":
+          [
+            {
+              "id": "About/Properties[Feedbacks]",
+              "name": "Feedbacks",
+              "pageSize": 45,
+              "elementType": { "__id": "Feedback" },
+              "propertyType": { "__id": "CollectionView$Feedback" },
+              "query":
+              {
+                "id": "About/Properties[Feedbacks]/Query",
+                "name": "FeedbacksQuery",
+                "elementType": { "__id": "Feedback" },
+                "returnType": { "__id": "Feedback*" },
+                "source":
+                {
+                  "member": { "__id": "TellemData/Members[Feedbacks]" }
+                }
+              },
+              "source":
+              {
+                "target": { "__id": "About/Properties[Feedbacks]/Query" }
+              }
+            },
+            {
+              "id": "About/Properties[AboutText]",
+              "name": "AboutText",
+              "elementType": { "__id": ":String" },
+              "propertyType": { "__id": ":String" },
+              ":@Required": { }
+            }
+          ]
+        },
+        {
+          "displayName": "Give Feedback",
+          "id": "AddEditFeedback",
+          "name": "AddEditFeedback",
+          "launchMode": "Single",
+          ":@SaveChangesTo":
+          {
+            "property": { "__id": "DataWorkspace/Members[TellemData]" }
+          },
+          "rootContentItem":
+          {
+            "displayName": "Give Feedback",
+            "name": "RootContentItem",
+            "kind": "Screen",
+            "view": { "__id": ":Screen" },
+            "childContentItems":
+            [
+              {
+                "displayName": "Tabs",
+                "name": "Tabs",
+                "kind": "Group",
+                "view": { "__id": ":TabPages" },
+                "childContentItems":
+                [
+                  {
+                    "displayName": "Details",
+                    "name": "Details",
+                    "kind": "Tab",
+                    "view": { "__id": ":RowsLayout" },
+                    "childContentItems":
+                    [
+                      {
+                        "displayName": "columns",
+                        "name": "columns",
+                        "kind": "Details",
+                        "view": { "__id": ":ColumnsLayout" },
+                        "dataSource":
+                        {
+                          "member": { "__id": "AddEditFeedback/Properties[Feedback]" }
+                        },
+                        "childContentItems":
+                        [
+                          {
+                            "displayName": "left",
+                            "name": "left",
+                            "kind": "Group",
+                            "view": { "__id": ":RowsLayout" },
+                            "childContentItems":
+                            [
+                              {
+                                "displayName": "Business",
+                                "name": "Company",
+                                "kind": "Value",
+                                "view": { "__id": ":TextBox" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "Feedback/Properties[Company]" }
+                                }
+                              },
+                              {
+                                "displayName": "Location",
+                                "name": "Location",
+                                "kind": "Value",
+                                "view": { "__id": ":TextBox" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "Feedback/Properties[Location]" }
+                                }
+                              },
+                              {
+                                "displayName": "Product",
+                                "name": "Product",
+                                "kind": "Value",
+                                "view": { "__id": ":TextBox" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "Feedback/Properties[Product]" }
+                                }
+                              },
+                              {
+                                "displayName": "Mood",
+                                "name": "Mood1",
+                                "kind": "Details",
+                                "view": { "__id": ":DetailsModalPicker" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "Feedback/Properties[Mood1]" }
+                                },
+                                "childContentItems":
+                                [
+                                  {
+                                    "displayName": "Mood",
+                                    "name": "RowTemplate",
+                                    "kind": "Details",
+                                    "view": { "__id": ":Summary" },
+                                    "dataSource":
+                                    {
+                                      "links":
+                                      [
+                                      ]
+                                    }
+                                  }
+                                ]
+                              },
+                              {
+                                "displayName": "Comment",
+                                "name": "Comment",
+                                "kind": "Value",
+                                "view": { "__id": ":TextArea" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "Feedback/Properties[Comment]" }
+                                }
+                              },
+                              {
+                                "displayName": "Employee",
+                                "name": "Employee",
+                                "kind": "Value",
+                                "view": { "__id": ":TextBox" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "Feedback/Properties[Employee]" }
+                                }
+                              },
+                              {
+                                "displayName": "Group",
+                                "name": "Group",
+                                "kind": "Group",
+                                "view": { "__id": ":ColumnsLayout" },
+                                "childContentItems":
+                                [
+                                  {
+                                    "displayName": "Cancel",
+                                    "name": "Cancel1",
+                                    "kind": "Command",
+                                    "view": { "__id": ":Button" },
+                                    "propertySources":
+                                    [
+                                      {
+                                        "property": { "__id": ":RootControl/Properties[Tap]" },
+                                        "source":
+                                        {
+                                          "target": { "__id": "AddEditFeedback/Methods[Cancel]" }
+                                        }
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "displayName": "Submit",
+                                    "name": "Save1",
+                                    "kind": "Command",
+                                    "view": { "__id": ":Button" },
+                                    "propertySources":
+                                    [
+                                      {
+                                        "property": { "__id": ":RootControl/Properties[Tap]" },
+                                        "source":
+                                        {
+                                          "target": { "__id": "AddEditFeedback/Methods[Save]" }
+                                        }
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ],
+                            "propertySources":
+                            [
+                              {
+                                "property": { "__id": ":RootControl/Properties[MinWidth]" },
+                                "value": 200
+                              },
+                              {
+                                "property": { "__id": ":RootControl/Properties[MaxWidth]" },
+                                "value": 400
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "displayName": "Popups",
+                "name": "Popups",
+                "kind": "Group",
+                "view": { "__id": ":DialogPages" }
+              }
+            ],
+            "propertySources":
+            [
+              {
+                "property": { "__id": ":Screen/Properties[ScreenType]" },
+                "value": "Edit"
+              },
+              {
+                "property": { "__id": ":Screen/Properties[ShowAsDialog]" },
+                "value": true
+              }
+            ]
+          },
+          "methods":
+          [
+            {
+              "id": "AddEditFeedback/Methods[showTab]",
+              "name": "showTab",
+              "parameters":
+              [
+                {
+                  "id": "AddEditFeedback/Methods[showTab]/Parameters[tabName]",
+                  "name": "tabName",
+                  "parameterType": { "__id": ":String" }
+                }
+              ]
+            },
+            {
+              "id": "AddEditFeedback/Methods[showDialog]",
+              "name": "showDialog",
+              "parameters":
+              [
+                {
+                  "id": "AddEditFeedback/Methods[showDialog]/Parameters[dialogName]",
+                  "name": "dialogName",
+                  "parameterType": { "__id": ":String" }
+                }
+              ]
+            },
+            {
+              "id": "AddEditFeedback/Methods[Save]",
+              "name": "Save"
+            },
+            {
+              "id": "AddEditFeedback/Methods[Cancel]",
+              "name": "Cancel"
+            }
+          ],
+          "properties":
+          [
+            {
+              "id": "AddEditFeedback/Properties[Feedback]",
+              "name": "Feedback",
+              "elementType": { "__id": "Feedback" },
+              "propertyType": { "__id": "Feedback" },
+              ":@IsParameter": { }
+            }
+          ]
+        },
+        {
+          "displayName": "All Feedback",
+          "id": "BrowseFeedbacks",
+          "name": "BrowseFeedbacks",
+          "launchMode": "Single",
+          ":@SaveChangesTo":
+          {
+            "property": { "__id": "DataWorkspace/Members[TellemData]" }
+          },
+          "rootContentItem":
+          {
+            "displayName": "All Feedback",
+            "name": "RootContentItem",
+            "kind": "Screen",
+            "view": { "__id": ":Screen" },
+            "childContentItems":
+            [
+              {
+                "displayName": "Tabs",
+                "name": "Tabs",
+                "kind": "Group",
+                "view": { "__id": ":TabPages" },
+                "childContentItems":
+                [
+                  {
+                    "displayName": "Feedback List",
+                    "name": "FeedbackList",
+                    "kind": "Tab",
+                    "view": { "__id": ":RowsLayout" },
+                    "childContentItems":
+                    [
+                      {
+                        "displayName": "Feedbacks",
+                        "name": "Feedback",
+                        "kind": "Collection",
+                        "view": { "__id": ":Table" },
+                        "dataSource":
+                        {
+                          "member": { "__id": "BrowseFeedbacks/Properties[Feedbacks]" }
+                        },
+                        "childContentItems":
+                        [
+                          {
+                            "displayName": "Feedback",
+                            "name": "RowTemplate",
+                            "kind": "Details",
+                            "view": { "__id": ":TableRowLayout" },
+                            "dataSource":
+                            {
+                              "links":
+                              [
+                              ]
+                            },
+                            "childContentItems":
+                            [
+                              {
+                                "displayName": "Business",
+                                "name": "Company",
+                                "kind": "Value",
+                                "view": { "__id": ":Text" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "Feedback/Properties[Company]" }
+                                },
+                                "propertySources":
+                                [
+                                  {
+                                    "property": { "__id": ":RootControl/Properties[MaxWidth]" },
+                                    "value": 100
+                                  },
+                                  {
+                                    "property": { "__id": ":RootControl/Properties[WidthSizingMode]" },
+                                    "value": "FixedSize"
+                                  },
+                                  {
+                                    "property": { "__id": ":RootControl/Properties[Width]" },
+                                    "value": 125
+                                  }
+                                ]
+                              },
+                              {
+                                "displayName": "Product",
+                                "name": "Product",
+                                "kind": "Value",
+                                "view": { "__id": ":Text" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "Feedback/Properties[Product]" }
+                                },
+                                "propertySources":
+                                [
+                                  {
+                                    "property": { "__id": ":RootControl/Properties[WidthSizingMode]" },
+                                    "value": "FixedSize"
+                                  },
+                                  {
+                                    "property": { "__id": ":RootControl/Properties[Width]" },
+                                    "value": 125
+                                  }
+                                ]
+                              },
+                              {
+                                "displayName": "Mood",
+                                "name": "Mood1",
+                                "kind": "Details",
+                                "view": { "__id": ":Summary" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "Feedback/Properties[Mood1]" }
+                                },
+                                "propertySources":
+                                [
+                                  {
+                                    "property": { "__id": ":RootControl/Properties[Width]" },
+                                    "value": 80
+                                  },
+                                  {
+                                    "property": { "__id": ":RootControl/Properties[MaxWidth]" },
+                                    "value": 100
+                                  },
+                                  {
+                                    "property": { "__id": ":RootControl/Properties[MinWidth]" },
+                                    "value": 30
+                                  },
+                                  {
+                                    "property": { "__id": ":RootControl/Properties[WidthSizingMode]" },
+                                    "value": "FixedSize"
+                                  }
+                                ]
+                              },
+                              {
+                                "displayName": "Comment",
+                                "name": "Comment",
+                                "kind": "Value",
+                                "view": { "__id": ":Text" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "Feedback/Properties[Comment]" }
+                                }
+                              },
+                              {
+                                "displayName": "User",
+                                "name": "UserID",
+                                "kind": "Value",
+                                "view": { "__id": ":Text" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "Feedback/Properties[UserID]" }
+                                }
+                              },
+                              {
+                                "displayName": "Date Created",
+                                "name": "DateCreated",
+                                "kind": "Value",
+                                "view": { "__id": ":Text" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "Feedback/Properties[DateCreated]" }
+                                },
+                                "propertySources":
+                                [
+                                  {
+                                    "property": { "__id": ":RootControl/Properties[WidthSizingMode]" },
+                                    "value": "FixedSize"
+                                  },
+                                  {
+                                    "property": { "__id": ":RootControl/Properties[Width]" },
+                                    "value": 125
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ],
+                        "propertySources":
+                        [
+                          {
+                            "property": { "__id": ":RootCollectionControl/Properties[ItemTap]" },
+                            "source":
+                            {
+                              "target": { "__id": "!module/Methods[showViewFeedback]" },
+                              ":@AssociatedCollection": { "collection": { "__id": "BrowseFeedbacks/Properties[Feedbacks]" } },
+                              "arguments":
+                              [
+                                {
+                                  "parameter": { "__id": "!module/Methods[showViewFeedback]/Parameters[Feedback]" },
+                                  "value":
+                                  {
+                                    "links":
+                                    [
+                                      {
+                                        "member": { "__id": "BrowseFeedbacks/Properties[Feedbacks]" }
+                                      },
+                                      {
+                                        "member": { "__id": "CollectionView$Feedback/Properties[selectedItem]" }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "displayName": "Add",
+                        "name": "AddFeedback",
+                        "kind": "Command",
+                        "view": { "__id": ":Button" },
+                        "propertySources":
+                        [
+                          {
+                            "property": { "__id": ":RootControl/Properties[Tap]" },
+                            "source":
+                            {
+                              "target": { "__id": "!module/Methods[showAddEditFeedback]" },
+                              ":@AssociatedCollection": { "collection": { "__id": "BrowseFeedbacks/Properties[Feedbacks]" } },
+                              ":@CreateNewEntity":
+                              {
+                                "targetParameter": { "__id": "!module/Methods[showAddEditFeedback]/Parameters[Feedback]" }
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ],
+                    "commandItems":
+                    [
+                      {
+                        "displayName": "Add",
+                        "name": "AddFeedback1",
+                        "kind": "Command",
+                        "view": { "__id": ":CommandBarButton" },
+                        "propertySources":
+                        [
+                          {
+                            "property": { "__id": ":RootControl/Properties[Tap]" },
+                            "source":
+                            {
+                              "target": { "__id": "!module/Methods[showAddEditFeedback]" },
+                              ":@AssociatedCollection": { "collection": { "__id": "BrowseFeedbacks/Properties[Feedbacks]" } },
+                              ":@CreateNewEntity":
+                              {
+                                "targetParameter": { "__id": "!module/Methods[showAddEditFeedback]/Parameters[Feedback]" }
+                              }
+                            }
+                          },
+                          {
+                            "property": { "__id": ":RootCommand/Properties[Icon]" },
+                            "value": "msls-add"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "propertySources":
+                [
+                  {
+                    "property": { "__id": ":RootControl/Properties[BrowseOnly]" },
+                    "value": true
+                  }
+                ]
+              },
+              {
+                "displayName": "Popups",
+                "name": "Popups",
+                "kind": "Group",
+                "view": { "__id": ":DialogPages" }
+              }
+            ]
+          },
+          "methods":
+          [
+            {
+              "id": "BrowseFeedbacks/Methods[showTab]",
+              "name": "showTab",
+              "parameters":
+              [
+                {
+                  "id": "BrowseFeedbacks/Methods[showTab]/Parameters[tabName]",
+                  "name": "tabName",
+                  "parameterType": { "__id": ":String" }
+                }
+              ]
+            },
+            {
+              "id": "BrowseFeedbacks/Methods[showDialog]",
+              "name": "showDialog",
+              "parameters":
+              [
+                {
+                  "id": "BrowseFeedbacks/Methods[showDialog]/Parameters[dialogName]",
+                  "name": "dialogName",
+                  "parameterType": { "__id": ":String" }
+                }
+              ]
+            },
+            {
+              "id": "BrowseFeedbacks/Methods[customViewSelected]",
+              "name": "customViewSelected"
+            }
+          ],
+          "properties":
+          [
+            {
+              "id": "BrowseFeedbacks/Properties[Feedbacks]",
+              "name": "Feedbacks",
+              "pageSize": 45,
+              "elementType": { "__id": "Feedback" },
+              "propertyType": { "__id": "CollectionView$Feedback" },
+              "query":
+              {
+                "id": "BrowseFeedbacks/Properties[Feedbacks]/Query",
+                "name": "FeedbacksQuery",
+                "elementType": { "__id": "Feedback" },
+                "returnType": { "__id": "Feedback*" },
+                "source":
+                {
+                  "member": { "__id": "TellemData/Members[Feedbacks]" }
+                },
+                "sortCriteria":
+                [
+                  {
+                    "member": { "__id": "Feedback/Properties[DateCreated]" }
+                  }
+                ]
+              },
+              "source":
+              {
+                "target": { "__id": "BrowseFeedbacks/Properties[Feedbacks]/Query" }
+              }
+            }
+          ]
+        },
+        {
+          "displayName": "Tellem",
+          "id": "Main",
+          "name": "Main",
+          "launchMode": "Single",
+          ":@SaveChangesTo":
+          {
+            "property": { "__id": "DataWorkspace/Members[TellemData]" }
+          },
+          "rootContentItem":
+          {
+            "displayName": "Tellem",
+            "name": "RootContentItem",
+            "kind": "Screen",
+            "view": { "__id": ":Screen" },
+            "childContentItems":
+            [
+              {
+                "displayName": "Tabs",
+                "name": "Tabs",
+                "kind": "Group",
+                "view": { "__id": ":TabPages" },
+                "childContentItems":
+                [
+                  {
+                    "displayName": "Feedback List",
+                    "name": "FeedbackList",
+                    "kind": "Tab",
+                    "view": { "__id": ":RowsLayout" },
+                    "childContentItems":
+                    [
+                      {
+                        "displayName": "Welcome to Tellem. <br \\>Connecting customers with businesses.",
+                        "name": "Message",
+                        "kind": "Value",
+                        "view": { "__id": ":Text" },
+                        "dataSource":
+                        {
+                          "member": { "__id": "Main/Properties[Message]" }
+                        }
+                      },
+                      {
+                        "displayName": "Give Feedback",
+                        "name": "ShowAddEditFeedback",
+                        "kind": "Command",
+                        "view": { "__id": ":Button" },
+                        "propertySources":
+                        [
+                          {
+                            "property": { "__id": ":RootControl/Properties[Tap]" },
+                            "source":
+                            {
+                              "target": { "__id": "!module/Methods[showAddEditFeedback]" },
+                              ":@CreateNewEntity":
+                              {
+                                "entityType": { "__id": "Feedback" },
+                                "targetParameter": { "__id": "!module/Methods[showAddEditFeedback]/Parameters[Feedback]" }
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "displayName": "All Feedback History",
+                        "name": "ShowBrowseFeedbacks1",
+                        "isHidden": true,
+                        "kind": "Command",
+                        "view": { "__id": ":Button" },
+                        "propertySources":
+                        [
+                          {
+                            "property": { "__id": ":RootControl/Properties[Tap]" },
+                            "source":
+                            {
+                              "target": { "__id": "!module/Methods[showBrowseFeedbacks]" }
+                            }
+                          },
+                          {
+                            "property": { "__id": ":RootCommand/Properties[HiddenIfDisabled]" },
+                            "value": true
+                          }
+                        ]
+                      },
+                      {
+                        "displayName": "My Feedback History",
+                        "name": "ShowMyFeedback1",
+                        "kind": "Command",
+                        "view": { "__id": ":Button" },
+                        "propertySources":
+                        [
+                          {
+                            "property": { "__id": ":RootControl/Properties[Tap]" },
+                            "source":
+                            {
+                              "target": { "__id": "!module/Methods[showMyFeedback]" }
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "displayName": "Group",
+                        "name": "Group",
+                        "kind": "Group",
+                        "view": { "__id": ":ColumnsLayout" }
+                      }
+                    ],
+                    "commandItems":
+                    [
+                      {
+                        "displayName": "Give Feedback",
+                        "name": "ShowAddEditFeedback1",
+                        "kind": "Command",
+                        "view": { "__id": ":CommandBarButton" },
+                        "propertySources":
+                        [
+                          {
+                            "property": { "__id": ":RootControl/Properties[Tap]" },
+                            "source":
+                            {
+                              "target": { "__id": "!module/Methods[showAddEditFeedback]" },
+                              ":@CreateNewEntity":
+                              {
+                                "entityType": { "__id": "Feedback" },
+                                "targetParameter": { "__id": "!module/Methods[showAddEditFeedback]/Parameters[Feedback]" }
+                              }
+                            }
+                          },
+                          {
+                            "property": { "__id": ":RootCommand/Properties[Icon]" },
+                            "value": "msls-add"
+                          }
+                        ]
+                      },
+                      {
+                        "displayName": "All Feedback History",
+                        "name": "ShowBrowseFeedbacks",
+                        "isHidden": true,
+                        "kind": "Command",
+                        "view": { "__id": ":CommandBarButton" },
+                        "propertySources":
+                        [
+                          {
+                            "property": { "__id": ":RootControl/Properties[Tap]" },
+                            "source":
+                            {
+                              "target": { "__id": "!module/Methods[showBrowseFeedbacks]" }
+                            }
+                          },
+                          {
+                            "property": { "__id": ":RootCommand/Properties[Icon]" },
+                            "value": "msls-list"
+                          }
+                        ]
+                      },
+                      {
+                        "displayName": "My Feedback History",
+                        "name": "ShowMyFeedback",
+                        "kind": "Command",
+                        "view": { "__id": ":CommandBarButton" },
+                        "propertySources":
+                        [
+                          {
+                            "property": { "__id": ":RootControl/Properties[Tap]" },
+                            "source":
+                            {
+                              "target": { "__id": "!module/Methods[showMyFeedback]" }
+                            }
+                          },
+                          {
+                            "property": { "__id": ":RootCommand/Properties[Icon]" },
+                            "value": "msls-list"
+                          }
+                        ]
+                      },
+                      {
+                        "displayName": "About",
+                        "name": "ShowAbout",
+                        "kind": "Command",
+                        "view": { "__id": ":CommandBarButton" },
+                        "propertySources":
+                        [
+                          {
+                            "property": { "__id": ":RootControl/Properties[Tap]" },
+                            "source":
+                            {
+                              "target": { "__id": "!module/Methods[showAbout]" }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "propertySources":
+                [
+                  {
+                    "property": { "__id": ":RootControl/Properties[BrowseOnly]" },
+                    "value": true
+                  }
+                ]
+              },
+              {
+                "displayName": "Popups",
+                "name": "Popups",
+                "kind": "Group",
+                "view": { "__id": ":DialogPages" }
+              }
+            ]
+          },
+          "methods":
+          [
+            {
+              "id": "Main/Methods[showTab]",
+              "name": "showTab",
+              "parameters":
+              [
+                {
+                  "id": "Main/Methods[showTab]/Parameters[tabName]",
+                  "name": "tabName",
+                  "parameterType": { "__id": ":String" }
+                }
+              ]
+            },
+            {
+              "id": "Main/Methods[showDialog]",
+              "name": "showDialog",
+              "parameters":
+              [
+                {
+                  "id": "Main/Methods[showDialog]/Parameters[dialogName]",
+                  "name": "dialogName",
+                  "parameterType": { "__id": ":String" }
+                }
+              ]
+            }
+          ],
+          "properties":
+          [
+            {
+              "id": "Main/Properties[Feedbacks]",
+              "name": "Feedbacks",
+              "pageSize": 45,
+              "elementType": { "__id": "Feedback" },
+              "propertyType": { "__id": "CollectionView$Feedback" },
+              "query":
+              {
+                "id": "Main/Properties[Feedbacks]/Query",
+                "name": "FeedbacksQuery",
+                "elementType": { "__id": "Feedback" },
+                "returnType": { "__id": "Feedback*" },
+                "source":
+                {
+                  "member": { "__id": "TellemData/Members[Feedbacks]" }
+                }
+              },
+              "source":
+              {
+                "target": { "__id": "Main/Properties[Feedbacks]/Query" }
+              }
+            },
+            {
+              "id": "Main/Properties[Message]",
+              "name": "Message",
+              "elementType": { "__id": ":String" },
+              "propertyType": { "__id": ":String" },
+              ":@Required": { }
+            }
+          ]
+        },
+        {
+          "displayName": "My Feedback History",
+          "id": "MyFeedback",
+          "name": "MyFeedback",
+          "launchMode": "Single",
+          ":@SaveChangesTo":
+          {
+            "property": { "__id": "DataWorkspace/Members[TellemData]" }
+          },
+          "rootContentItem":
+          {
+            "displayName": "My Feedback History",
+            "name": "RootContentItem",
+            "kind": "Screen",
+            "view": { "__id": ":Screen" },
+            "childContentItems":
+            [
+              {
+                "displayName": "Tabs",
+                "name": "Tabs",
+                "kind": "Group",
+                "view": { "__id": ":TabPages" },
+                "childContentItems":
+                [
+                  {
+                    "displayName": "Feedback List",
+                    "name": "FeedbackList",
+                    "kind": "Tab",
+                    "view": { "__id": ":RowsLayout" },
+                    "childContentItems":
+                    [
+                      {
+                        "displayName": "qry My Feedback",
+                        "name": "Feedback",
+                        "kind": "Collection",
+                        "view": { "__id": ":List" },
+                        "dataSource":
+                        {
+                          "member": { "__id": "MyFeedback/Properties[qryMyFeedback]" }
+                        },
+                        "childContentItems":
+                        [
+                          {
+                            "displayName": "Feedback",
+                            "name": "RowTemplate",
+                            "kind": "Details",
+                            "view": { "__id": ":RowsLayout" },
+                            "dataSource":
+                            {
+                              "links":
+                              [
+                              ]
+                            },
+                            "childContentItems":
+                            [
+                              {
+                                "displayName": "Business",
+                                "name": "Company",
+                                "kind": "Value",
+                                "view": { "__id": ":Text" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "Feedback/Properties[Company]" }
+                                }
+                              },
+                              {
+                                "displayName": "Mood1",
+                                "name": "Mood1",
+                                "kind": "Details",
+                                "view": { "__id": ":Summary" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "Feedback/Properties[Mood1]" }
+                                }
+                              },
+                              {
+                                "displayName": "Comment",
+                                "name": "Comment",
+                                "kind": "Value",
+                                "view": { "__id": ":Text" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "Feedback/Properties[Comment]" }
+                                }
+                              },
+                              {
+                                "displayName": "Date Created",
+                                "name": "DateCreated",
+                                "kind": "Value",
+                                "view": { "__id": ":Text" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "Feedback/Properties[DateCreated]" }
+                                },
+                                "propertySources":
+                                [
+                                  {
+                                    "property": { "__id": ":RootControl/Properties[FontStyle]" },
+                                    "value": "Small"
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ],
+                        "propertySources":
+                        [
+                          {
+                            "property": { "__id": ":RootCollectionControl/Properties[ItemTap]" },
+                            "source":
+                            {
+                              "target": { "__id": "!module/Methods[showViewFeedback]" },
+                              ":@AssociatedCollection": { "collection": { "__id": "MyFeedback/Properties[qryMyFeedback]" } },
+                              "arguments":
+                              [
+                                {
+                                  "parameter": { "__id": "!module/Methods[showViewFeedback]/Parameters[Feedback]" },
+                                  "value":
+                                  {
+                                    "links":
+                                    [
+                                      {
+                                        "member": { "__id": "MyFeedback/Properties[qryMyFeedback]" }
+                                      },
+                                      {
+                                        "member": { "__id": "CollectionView$Feedback/Properties[selectedItem]" }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "propertySources":
+                [
+                  {
+                    "property": { "__id": ":RootControl/Properties[BrowseOnly]" },
+                    "value": true
+                  }
+                ]
+              },
+              {
+                "displayName": "Popups",
+                "name": "Popups",
+                "kind": "Group",
+                "view": { "__id": ":DialogPages" }
+              }
+            ]
+          },
+          "methods":
+          [
+            {
+              "id": "MyFeedback/Methods[showTab]",
+              "name": "showTab",
+              "parameters":
+              [
+                {
+                  "id": "MyFeedback/Methods[showTab]/Parameters[tabName]",
+                  "name": "tabName",
+                  "parameterType": { "__id": ":String" }
+                }
+              ]
+            },
+            {
+              "id": "MyFeedback/Methods[showDialog]",
+              "name": "showDialog",
+              "parameters":
+              [
+                {
+                  "id": "MyFeedback/Methods[showDialog]/Parameters[dialogName]",
+                  "name": "dialogName",
+                  "parameterType": { "__id": ":String" }
+                }
+              ]
+            }
+          ],
+          "properties":
+          [
+            {
+              "id": "MyFeedback/Properties[qryMyFeedback]",
+              "name": "qryMyFeedback",
+              "pageSize": 45,
+              "elementType": { "__id": "Feedback" },
+              "propertyType": { "__id": "CollectionView$Feedback" },
+              "query":
+              {
+                "id": "MyFeedback/Properties[qryMyFeedback]/Query",
+                "name": "qryMyFeedbackQuery",
+                "elementType": { "__id": "Feedback" },
+                "returnType": { "__id": "Feedback*" },
+                "source":
+                {
+                  "member": { "__id": "TellemData/Members[qryMyFeedback]" }
+                },
+                "sortCriteria":
+                [
+                  {
+                    "member": { "__id": "Feedback/Properties[DateCreated]" }
+                  }
+                ]
+              },
+              "source":
+              {
+                "target": { "__id": "MyFeedback/Properties[qryMyFeedback]/Query" }
+              }
+            }
+          ]
+        },
+        {
+          "displayName": "View Feedback",
+          "id": "ViewFeedback",
+          "name": "ViewFeedback",
+          "launchMode": "Single",
+          ":@SaveChangesTo":
+          {
+            "property": { "__id": "DataWorkspace/Members[TellemData]" }
+          },
+          "rootContentItem":
+          {
+            "displayName": "Root Content Item",
+            "name": "RootContentItem",
+            "kind": "Screen",
+            "view": { "__id": ":Screen" },
+            "childContentItems":
+            [
+              {
+                "displayName": "Tabs",
+                "name": "Tabs",
+                "kind": "Group",
+                "view": { "__id": ":TabPages" },
+                "childContentItems":
+                [
+                  {
+                    "displayName": "Details",
+                    "name": "Details",
+                    "kind": "Tab",
+                    "view": { "__id": ":RowsLayout" },
+                    "childContentItems":
+                    [
+                      {
+                        "displayName": "columns",
+                        "name": "columns",
+                        "kind": "Details",
+                        "view": { "__id": ":ColumnsLayout" },
+                        "dataSource":
+                        {
+                          "member": { "__id": "ViewFeedback/Properties[Feedback]" }
+                        },
+                        "childContentItems":
+                        [
+                          {
+                            "displayName": "left",
+                            "name": "left",
+                            "kind": "Group",
+                            "view": { "__id": ":RowsLayout" },
+                            "childContentItems":
+                            [
+                              {
+                                "displayName": "Business",
+                                "name": "Company",
+                                "kind": "Value",
+                                "view": { "__id": ":Text" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "Feedback/Properties[Company]" }
+                                }
+                              },
+                              {
+                                "displayName": "Location",
+                                "name": "Location",
+                                "kind": "Value",
+                                "view": { "__id": ":Text" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "Feedback/Properties[Location]" }
+                                }
+                              },
+                              {
+                                "displayName": "Product",
+                                "name": "Product",
+                                "kind": "Value",
+                                "view": { "__id": ":Text" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "Feedback/Properties[Product]" }
+                                }
+                              },
+                              {
+                                "displayName": "Mood",
+                                "name": "Mood1",
+                                "kind": "Details",
+                                "view": { "__id": ":Summary" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "Feedback/Properties[Mood1]" }
+                                }
+                              },
+                              {
+                                "displayName": "Comment",
+                                "name": "Comment",
+                                "kind": "Value",
+                                "view": { "__id": ":Text" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "Feedback/Properties[Comment]" }
+                                }
+                              },
+                              {
+                                "displayName": "Employee",
+                                "name": "Employee",
+                                "kind": "Value",
+                                "view": { "__id": ":Text" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "Feedback/Properties[Employee]" }
+                                }
+                              },
+                              {
+                                "displayName": "Date Created",
+                                "name": "DateCreated",
+                                "kind": "Value",
+                                "view": { "__id": ":Text" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "Feedback/Properties[DateCreated]" }
+                                }
+                              }
+                            ],
+                            "propertySources":
+                            [
+                              {
+                                "property": { "__id": ":RootControl/Properties[MinWidth]" },
+                                "value": 200
+                              },
+                              {
+                                "property": { "__id": ":RootControl/Properties[MaxWidth]" },
+                                "value": 400
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ],
+                    "commandItems":
+                    [
+                      {
+                        "displayName": "Edit Feedback",
+                        "name": "EditFeedback",
+                        "kind": "Command",
+                        "view": { "__id": ":CommandBarButton" },
+                        "propertySources":
+                        [
+                          {
+                            "property": { "__id": ":RootControl/Properties[Tap]" },
+                            "source":
+                            {
+                              "target": { "__id": "!module/Methods[showAddEditFeedback]" },
+                              "arguments":
+                              [
+                                {
+                                  "parameter": { "__id": "!module/Methods[showAddEditFeedback]/Parameters[Feedback]" },
+                                  "value":
+                                  {
+                                    "links":
+                                    [
+                                      {
+                                        "member": { "__id": "ViewFeedback/Properties[Feedback]" }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "property": { "__id": ":RootCommand/Properties[Icon]" },
+                            "value": "msls-edit"
+                          }
+                        ]
+                      },
+                      {
+                        "displayName": "Home",
+                        "name": "ShowMain",
+                        "kind": "Command",
+                        "view": { "__id": ":CommandBarButton" },
+                        "propertySources":
+                        [
+                          {
+                            "property": { "__id": ":RootControl/Properties[Tap]" },
+                            "source":
+                            {
+                              "target": { "__id": "ViewFeedback/Methods[ShowMain_Tap]" }
+                            }
+                          },
+                          {
+                            "property": { "__id": ":RootCommand/Properties[Icon]" },
+                            "value": "msls-move"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "propertySources":
+                [
+                  {
+                    "property": { "__id": ":RootControl/Properties[BrowseOnly]" },
+                    "value": true
+                  }
+                ]
+              },
+              {
+                "displayName": "Popups",
+                "name": "Popups",
+                "kind": "Group",
+                "view": { "__id": ":DialogPages" }
+              }
+            ],
+            "propertySources":
+            [
+              {
+                "property": { "__id": ":Screen/Properties[ShowAsDialog]" },
+                "value": true
+              }
+            ]
+          },
+          "methods":
+          [
+            {
+              "id": "ViewFeedback/Methods[showTab]",
+              "name": "showTab",
+              "parameters":
+              [
+                {
+                  "id": "ViewFeedback/Methods[showTab]/Parameters[tabName]",
+                  "name": "tabName",
+                  "parameterType": { "__id": ":String" }
+                }
+              ]
+            },
+            {
+              "id": "ViewFeedback/Methods[showDialog]",
+              "name": "showDialog",
+              "parameters":
+              [
+                {
+                  "id": "ViewFeedback/Methods[showDialog]/Parameters[dialogName]",
+                  "name": "dialogName",
+                  "parameterType": { "__id": ":String" }
+                }
+              ]
+            },
+            {
+              "id": "ViewFeedback/Methods[ShowMain_Tap]",
+              "name": "ShowMain_Tap"
+            }
+          ],
+          "properties":
+          [
+            {
+              "id": "ViewFeedback/Properties[Feedback]",
+              "name": "Feedback",
+              "elementType": { "__id": "Feedback" },
+              "propertyType": { "__id": "Feedback" },
+              ":@IsParameter": { }
+            }
+          ]
+        }
+      ],
+      "methods":
+      [
+        {
+          "id": "!module/Methods[showAbout]",
+          "name": "showAbout",
+          ":@ShowScreenMethod": { "targetScreen": { "__id": "About" } }
+        },
+        {
+          "id": "!module/Methods[showAddEditFeedback]",
+          "name": "showAddEditFeedback",
+          ":@ShowScreenMethod": { "targetScreen": { "__id": "AddEditFeedback" } },
+          "parameters":
+          [
+            {
+              "id": "!module/Methods[showAddEditFeedback]/Parameters[Feedback]",
+              "name": "Feedback",
+              "parameterType": { "__id": "Feedback" }
+            }
+          ]
+        },
+        {
+          "id": "!module/Methods[showBrowseFeedbacks]",
+          "name": "showBrowseFeedbacks",
+          ":@ShowScreenMethod": { "targetScreen": { "__id": "BrowseFeedbacks" } }
+        },
+        {
+          "id": "!module/Methods[showMain]",
+          "name": "showMain",
+          ":@ShowScreenMethod": { "targetScreen": { "__id": "Main" } }
+        },
+        {
+          "id": "!module/Methods[showMyFeedback]",
+          "name": "showMyFeedback",
+          ":@ShowScreenMethod": { "targetScreen": { "__id": "MyFeedback" } }
+        },
+        {
+          "id": "!module/Methods[showViewFeedback]",
+          "name": "showViewFeedback",
+          ":@ShowScreenMethod": { "targetScreen": { "__id": "ViewFeedback" } },
+          "parameters":
+          [
+            {
+              "id": "!module/Methods[showViewFeedback]/Parameters[Feedback]",
+              "name": "Feedback",
+              "parameterType": { "__id": "Feedback" }
+            }
+          ]
+        }
+      ],
+      "navigationItems":
+      [
+        {
+          "id": "!module/NavigationItems[link]",
+          "name": "link",
+          "method": { "__id": "!module/Methods[showMain]" }
+        },
+        {
+          "id": "!module/NavigationItems[link1]",
+          "name": "link1",
+          "method": { "__id": "!module/Methods[showMyFeedback]" }
+        },
+        {
+          "id": "!module/NavigationItems[link2]",
+          "name": "link2",
+          "method": { "__id": "!module/Methods[showBrowseFeedbacks]" }
+        }
+      ]
+    }
+  ]
+}

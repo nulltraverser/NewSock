@@ -1,0 +1,2 @@
+c:\users\alec\documents\visual studio 2013\Projects\TellemCSharp\TellemCSharp\TellemCSharp.HTMLClient\bin\Debug\LSResourceGeneratorsTask.mcs
+c:\users\alec\documents\visual studio 2013\Projects\TellemCSharp\TellemCSharp\TellemCSharp.HTMLClient\bin\Debug\LSClientCodeGeneratorsTask.mcs
